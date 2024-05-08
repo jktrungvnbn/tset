@@ -3,7 +3,7 @@ package View.Dialog;
 import RTDRestaurant.Controller.Service.ServiceCustomer;
 import RTDRestaurant.Model.ModelCTHD;
 import RTDRestaurant.Model.ModelHoaDon;
-import RTDRestaurant.View.Swing.CustomScrollBar.ScrollBarCustom;
+import View.Swing.CustomScrollBar.ScrollBarCustom;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.GradientPaint;

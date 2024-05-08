@@ -1,6 +1,8 @@
 
 package BiA.javamodel;
 
+import javax.swing.Icon;
+
 
 public class ModelSanPham {
     private int MaSP ;
@@ -8,7 +10,16 @@ public class ModelSanPham {
     private double Gia ; 
     private int MaNCC ;
     private boolean trangThai ;
+    private Icon icon ;
 
+    public Icon getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Icon icon) {
+        this.icon = icon;
+    }
+    
     public ModelSanPham(int id, String name, int value, boolean par) {
     }
 

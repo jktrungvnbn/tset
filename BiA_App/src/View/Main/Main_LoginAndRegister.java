@@ -7,11 +7,11 @@ import BiA.Controller.Service._ServiceUser;
 import BiA.javamodel.ModelLogin;
 import BiA.javamodel.ModelMessage;
 import BiA.javamodel.ModelNguoiDung;
-import View.Component.Message;
-import View.Component.PanelCover;
-import View.Component.PanelLoading;
-import View.Component.PanelLoginAndRegister;
-import View.Component.PanelVerifyCode;
+import View.Component.LoginAndRegister_Component.Message;
+import View.Component.LoginAndRegister_Component.PanelCover;
+import View.Component.LoginAndRegister_Component.PanelLoading;
+import View.Component.LoginAndRegister_Component.PanelLoginAndRegister;
+import View.Component.LoginAndRegister_Component.PanelVerifyCode;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -42,7 +42,7 @@ public class Main_LoginAndRegister extends javax.swing.JFrame {
     public Main_LoginAndRegister() throws SQLException {
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("BI-A VIP");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/restaurant (1).png")));
     }
 

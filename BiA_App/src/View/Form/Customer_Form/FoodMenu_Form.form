@@ -128,7 +128,7 @@
         <Property name="inheritsPopupMenu" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtSearch">
+    <Component class="View.Swing.MyTextField" name="txtSearch">
       <Properties>
         <Property name="prefixIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/loupe (1).png"/>
@@ -184,7 +184,7 @@
         <Property name="text" type="java.lang.String" value="S&#x103;&#x301;p x&#xea;&#x301;p theo"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.Button" name="cmdShowBill">
+    <Component class="View.Swing.Button" name="cmdShowBill">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="7b" green="5b" red="6c" type="rgb"/>
@@ -216,7 +216,7 @@
         <Property name="text" type="java.lang.String" value="MA&#x303; BA&#x300;N CU&#x309;A BA&#x323;N"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtTableName">
+    <Component class="View.Swing.MyTextField" name="txtTableName">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>

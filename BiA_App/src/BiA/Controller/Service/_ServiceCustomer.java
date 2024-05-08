@@ -76,7 +76,7 @@ public class _ServiceCustomer {
     //Lấy toàn bộ danh sách sản phẩm theo loại Món Ăn đang kinh doanh
     public ArrayList<ModelSanPham> MenuFood(String type) throws SQLException{
         ArrayList<ModelSanPham> list = new ArrayList<>();
-        String sql = "SELECT MaSP,TenSP,Gia FROM sanpham WHERE TrangThai= true";
+        String sql = "SELECT MaSP,TenSP,Gia FROM sanpham WHERE TrangThai= 1";
         PreparedStatement p = connection.prepareStatement(sql);
         p.setString(1, type);
         ResultSet r = p.executeQuery();
@@ -118,9 +118,9 @@ public class _ServiceCustomer {
         ArrayList<ModelBan> list = new ArrayList<>();
         String sql = "SELECT SoBan,Trangthai FROM Ban WHERE Vitri=?";
         if (state){
-            sql += " AND Trangthai='true'";
+            sql += " AND Trangthai=1";
         } else  {
-            sql += " AND Trangthai='false'";
+            sql += " AND Trangthai=0";
         }
         PreparedStatement p = connection.prepareStatement(sql);
         p.setString(1, floor);
@@ -174,7 +174,7 @@ public class _ServiceCustomer {
         //Thêm Hoá Đơn mới
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
         String sql = "INSERT INTO HoaDon(MaHD,MaKH,SoBan,NgayLapHD,Code_Voucher,Trangthai)"
-                + " VALUES (?,?,?,to_date(?, 'dd-mm-yyyy'),0,'Chua thanh toan')";
+                + " VALUES (?,?,?,to_date(?, 'dd-mm-yyyy'),0,0)";
         PreparedStatement p = connection.prepareStatement(sql);
         p.setInt(1, idHD);
         p.setInt(2, customer.getMaKH());
@@ -190,7 +190,7 @@ public class _ServiceCustomer {
     public ModelHoaDon FindHoaDon(ModelKhachHang customer) throws SQLException {
         ModelHoaDon hoadon = null;
         String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,to_char(NgayHD,'dd-mm-yyyy') AS Ngay,TienMonAn,Code_Voucher,TienGiam,Tongtien,Trangthai FROM HoaDon "
-                + "WHERE ID_KH=? AND Trangthai='Chua thanh toan'";
+                + "WHERE ID_KH=? AND Trangthai=0";
         PreparedStatement p = connection.prepareStatement(sql);
         p.setInt(1, customer.getMaKH());
         ResultSet r = p.executeQuery();

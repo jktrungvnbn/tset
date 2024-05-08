@@ -15,6 +15,8 @@ import View.Form.Customer_Form.Voucher_Form;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import net.miginfocom.swing.MigLayout;
 
 
@@ -79,7 +81,11 @@ public class Main_Customer_Frame extends javax.swing.JFrame {
                     case 2 -> main.showForm(new AboutUs_Form());
                     case 6 -> main.showForm(new AccountC_Form(user));
                     case 7 -> {
+                    try {
                         main.showForm(new Voucher_Form(user));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(Main_Customer_Frame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                     }
                     case 8 -> {
                         main.showForm(new Bill_Form(user));

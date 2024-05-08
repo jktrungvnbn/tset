@@ -49,11 +49,10 @@ public class DatabaseConnection {
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
-//    public static void main(String[] args) throws SQLException {
-//        DatabaseConnection d  =  new DatabaseConnection();
-//        d.connectToDatabase();
-//        System.out.println("Kết nối thành công!");
-//
-//    }
+    public static void main(String[] args) throws SQLException {
+       DatabaseConnection d  =  new DatabaseConnection();
+       d.connectToDatabase();
+       System.out.println("Kết nối thành công!");
+   }
 }
 
