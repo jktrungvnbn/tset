@@ -1,5 +1,5 @@
 
-package BiA.Controller.Event;
+package RTDRestaurant.Controller.Event;
 
 //Event khi chọn menu (menu index + subMenu index)
 public interface EventMenuSelected {

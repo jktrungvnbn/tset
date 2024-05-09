@@ -1,58 +1,41 @@
 
-package BiA.Controller.Connection;
+package RTDRestaurant.Controller.Connection;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
 
 // Kết nối tới DataBase của hệ thống
-//
+
 public class DatabaseConnection {
 
-    
     private static DatabaseConnection instance;
     private Connection connection;
 
-    public static DatabaseConnection getInstance() throws SQLException {
+    public static DatabaseConnection getInstance() {
         if (instance == null) {
-                instance = new DatabaseConnection();
-                instance.connectToDatabase();
+            instance = new DatabaseConnection();
         }
         return instance;
     }
 
-    public DatabaseConnection() {
+    private DatabaseConnection() {
 
     }
     //Thực hiện kết nối tới Database
     public void connectToDatabase() throws SQLException {
-        
-        final String url = "jdbc:mysql://103.82.21.135:3306/BIA" ;
-        final String username = "root";
-        final String password = "Klmnop123#";
-        
-     
-         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, password);
-            System.out.println("connect successfully!");
-        } catch (ClassNotFoundException | SQLException ex){
-            ex.getMessage();
-        }
-        
+        final String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        final String username = "Doan";
+        final String password = "123";
+        connection = DriverManager.getConnection(url, username, password);
     }
  
-    public Connection getConnection()  {
+    public Connection getConnection() {
         return connection;
     }
     
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
-    public static void main(String[] args) throws SQLException {
-       DatabaseConnection d  =  new DatabaseConnection();
-       d.connectToDatabase();
-       System.out.println("Kết nối thành công!");
-   }
 }
 
