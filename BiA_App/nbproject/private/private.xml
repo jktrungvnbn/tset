@@ -3,15 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/tset/BIA_APP/src/BIA/Controller/Service/ServiceCustomer.java</file>
             <file>file:/E:/tset/BIA_APP/src/BIA/Controller/Service/ServiceStaff.java</file>
             <file>file:/E:/tset/BIA_APP/src/BIA/View/Component/Admin_Component/MenuA.java</file>
             <file>file:/E:/tset/BIA_APP/src/BIA/View/Component/WarehouseStaff_Component/MenuStaff.java</file>
             <file>file:/E:/tset/BIA_APP/src/BIA/View/Swing/CustomScrollBar/ScrollBarCustom.java</file>
-            <file>file:/E:/tset/BIA_APP/src/BIA/View/Swing/CustomScrollBar/ModernScrollBarUI.java</file>
             <file>file:/E:/tset/BIA_APP/src/BIA/Controller/Connection/DatabaseConnection.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/View/Main_Frame/Main_WarehouseStaff_Frame.java</file>
             <file>file:/E:/tset/BIA_APP/src/BIA/Controller/Service/ServiceMail.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/View/Main_Frame/Main_LoginAndRegister.java</file>
             <file>file:/E:/tset/BIA_APP/src/BIA/Controller/Service/ServiceAdmin.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelCover.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/Controller/Service/ServiceCustomer.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/View/Swing/Button.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/View/Swing/CustomScrollBar/ModernScrollBarUI.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/Message.java</file>
+            <file>file:/E:/tset/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelLoading.java</file>
         </group>
     </open-files>
 </project-private>

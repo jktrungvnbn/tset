@@ -47,11 +47,11 @@ public class PanelCover extends javax.swing.JPanel {
         add(logo);
 
         title = new JLabel("Chào mừng bạn đến với nhà hàng");
-        title.setFont(new Font("sansserif", 1, 18));
+        title.setFont(new Font("sansserif", 1, 18));    
         title.setForeground(new Color(245, 245, 245));
         add(title);
 
-        subtitle = new JLabel("Royal TheDreamers");
+        subtitle = new JLabel("BIA VIET");
         subtitle.setFont(new Font("sansserif", 1, 28));
         subtitle.setForeground(new Color(245, 245, 245));
         add(subtitle);
@@ -101,7 +101,7 @@ public class PanelCover extends javax.swing.JPanel {
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        GradientPaint gp = new GradientPaint(0, 0, Color.decode("#C06C84"), 0, getHeight(), Color.decode("#6C5B7B"));
+        GradientPaint gp = new GradientPaint(0, 0, Color.decode("#f1f2b5"), 0, getHeight()  , Color.decode("#135058") );
         g2.setPaint(gp);
         g2.fillRect(0, 0, getWidth(), getHeight());
         super.paintComponent(g);
