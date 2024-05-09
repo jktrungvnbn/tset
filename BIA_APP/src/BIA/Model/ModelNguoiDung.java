@@ -1,5 +1,5 @@
 
-package RTDRestaurant.Model;
+package BIA.Model;
 
 // Model Người dùng của hệ thống 
 public class ModelNguoiDung {

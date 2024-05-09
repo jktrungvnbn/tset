@@ -1,5 +1,5 @@
 
-package RTDRestaurant.View.Component.LoginAndRegister_Component;
+package BIA.View.Component.LoginAndRegister_Component;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -17,28 +17,31 @@ public class Message extends javax.swing.JPanel {
     public void setShow(boolean show) {
         this.show = show;
     }
-    
-    //Loại thông báo
-    private MessageType messageType=MessageType.SUCCESS;
+
+    // Loại thông báo
+    private MessageType messageType = MessageType.SUCCESS;
     private boolean show;
+
     public Message() {
         initComponents();
         setOpaque(false);
         setVisible(false);
     }
-    
-    //Set Data cho thông báo
-    public void showMessage(MessageType messageType,String message){
-        this.messageType=messageType;
+
+    // Set Data cho thông báo
+    public void showMessage(MessageType messageType, String message) {
+        this.messageType = messageType;
         lbMessage.setText(message);
-        if(messageType==MessageType.SUCCESS){
+        if (messageType == MessageType.SUCCESS) {
             lbMessage.setIcon(new ImageIcon(getClass().getResource("/Icons/success.png")));
-        }else{
+        } else {
             lbMessage.setIcon(new ImageIcon(getClass().getResource("/Icons/error.png")));
         }
     }
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbMessage = new javax.swing.JLabel();
@@ -54,34 +57,34 @@ public class Message extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbMessage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lbMessage, javax.swing.GroupLayout.Alignment.TRAILING,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE));
     }// </editor-fold>//GEN-END:initComponents
-    //Loại thông báo thành công/thất bại
-    public static enum MessageType{
-        SUCCESS,ERROR
+     // Loại thông báo thành công/thất bại
+
+    public static enum MessageType {
+        SUCCESS, ERROR
     }
 
     @Override
     protected void paintComponent(Graphics g) {
-        Graphics2D g2= (Graphics2D)g;
-        if(messageType==MessageType.SUCCESS){
+        Graphics2D g2 = (Graphics2D) g;
+        if (messageType == MessageType.SUCCESS) {
             g2.setColor(Color.decode("#11998e"));
-        }else{
+        } else {
             g2.setColor(Color.decode("#ED213A"));
         }
-        g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,0.9f));
+        g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.9f));
         g2.fillRect(0, 0, getWidth(), getHeight());
-        g2.setColor(new Color(245,245,245));
-        g2.drawRect(0, 0, getWidth()-1, getHeight()-1);
-        super.paintComponent(g); 
+        g2.setColor(new Color(245, 245, 245));
+        g2.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
+        super.paintComponent(g);
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lbMessage;
     // End of variables declaration//GEN-END:variables

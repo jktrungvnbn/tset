@@ -92,7 +92,7 @@
         <Property name="text" type="java.lang.String" value="Value"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdMinus">
+    <Component class="BIA.View.Swing.ButtonOutLine" name="cmdMinus">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/minus.png"/>
@@ -103,7 +103,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdMinusActionPerformed"/>
       </Events>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdAdd">
+    <Component class="BIA.View.Swing.ButtonOutLine" name="cmdAdd">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/add.png"/>
@@ -114,7 +114,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdAddActionPerformed"/>
       </Events>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.Button" name="cmdOrder">
+    <Component class="BIA.View.Swing.Button" name="cmdOrder">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="7b" green="5b" red="6c" type="rgb"/>
@@ -130,7 +130,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtNum">
+    <Component class="BIA.View.Swing.MyTextField" name="txtNum">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>

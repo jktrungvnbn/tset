@@ -26,7 +26,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="RTDRestaurant.View.Swing.PanelRound" name="panelRound1">
+    <Container class="BIA.View.Swing.PanelRound" name="panelRound1">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[300, 300]"/>
@@ -87,7 +87,7 @@
             <Property name="text" type="java.lang.String" value="Value"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.Button" name="cmdAdj">
+        <Component class="BIA.View.Swing.Button" name="cmdAdj">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="7b" green="5b" red="6c" type="rgb"/>

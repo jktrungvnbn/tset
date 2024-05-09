@@ -1,4 +1,4 @@
-package RTDRestaurant.Controller.Event;
+package BIA.Controller.Event;
 
 import java.awt.Component;
 

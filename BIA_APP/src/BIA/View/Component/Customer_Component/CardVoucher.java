@@ -1,11 +1,11 @@
-package RTDRestaurant.View.Component.Customer_Component;
+package BIA.View.Component.Customer_Component;
 
-import RTDRestaurant.Model.ModelKhachHang;
-import RTDRestaurant.Model.ModelHoaDon;
-import RTDRestaurant.Model.ModelVoucher;
-import RTDRestaurant.View.Dialog.MS_ConfirmExchangeVoucher;
-import RTDRestaurant.View.Dialog.MS_Warning;
-import RTDRestaurant.View.Main_Frame.Main_Customer_Frame;
+import BIA.Model.ModelKhachHang;
+import BIA.Model.ModelHoaDon;
+import BIA.Model.ModelVoucher;
+import BIA.View.Dialog.MS_ConfirmExchangeVoucher;
+import BIA.View.Dialog.MS_Warning;
+import BIA.View.Main_Frame.Main_Customer_Frame;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -22,29 +22,29 @@ public class CardVoucher extends javax.swing.JPanel {
     private final ModelHoaDon hoadon;
     private MS_Warning warning;
     private MS_ConfirmExchangeVoucher exchange;
+
     public ModelVoucher getData() {
         return data;
     }
 
-    public CardVoucher(ModelVoucher data,ModelKhachHang customer,ModelHoaDon hoadon) {
+    public CardVoucher(ModelVoucher data, ModelKhachHang customer, ModelHoaDon hoadon) {
         this.data = data;
-        this.customer=customer;
-        this.hoadon=hoadon;
-        warning  = new MS_Warning(Main_Customer_Frame.getFrames()[0], true);
-        exchange  = new MS_ConfirmExchangeVoucher(Main_Customer_Frame.getFrames()[0], true);
+        this.customer = customer;
+        this.hoadon = hoadon;
+        warning = new MS_Warning(Main_Customer_Frame.getFrames()[0], true);
+        exchange = new MS_ConfirmExchangeVoucher(Main_Customer_Frame.getFrames()[0], true);
         initComponents();
         init();
-        cmdExchange.addActionListener(new ActionListener(){
+        cmdExchange.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int Vpoint=data.getPoint();
-                if(hoadon==null){
-                    
-                }
-                else{
-                    if(customer.getPoints()<Vpoint){
-                    warning.WarningExchange(Vpoint-customer.getPoints());
-                    }else{
+                int Vpoint = data.getPoint();
+                if (hoadon == null) {
+
+                } else {
+                    if (customer.getPoints() < Vpoint) {
+                        warning.WarningExchange(Vpoint - customer.getPoints());
+                    } else {
                         exchange.ConfirmExchange(hoadon, data);
                     }
                 }
@@ -52,9 +52,9 @@ public class CardVoucher extends javax.swing.JPanel {
         });
         setOpaque(false);
     }
-    
-    public void init(){
-        
+
+    public void init() {
+
         setPreferredSize(new Dimension(300, 325));
         ibDescription.setText(data.getDescription());
         lbQuantity.setText("Số lượng: " + data.getQuantity());
@@ -84,14 +84,16 @@ public class CardVoucher extends javax.swing.JPanel {
             cmdExchange.setEnabled(false);
         }
     }
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRound1 = new RTDRestaurant.View.Swing.PanelRound();
+        panelRound1 = new BIA.View.Swing.PanelRound();
         img = new javax.swing.JLabel();
         lbQuantity = new javax.swing.JLabel();
-        cmdExchange = new RTDRestaurant.View.Swing.Button();
+        cmdExchange = new BIA.View.Swing.Button();
         ibDescription = new javax.swing.JLabel();
         lbPoint = new javax.swing.JLabel();
 
@@ -126,45 +128,52 @@ public class CardVoucher extends javax.swing.JPanel {
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(img, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ibDescription, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                    .addComponent(lbPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(cmdExchange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(83, 83, 83))
-        );
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(img, javax.swing.GroupLayout.Alignment.TRAILING,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                Short.MAX_VALUE)
+                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(panelRound1Layout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(ibDescription, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lbQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 180,
+                                                Short.MAX_VALUE)
+                                        .addComponent(lbPoint, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                                .addGap(84, 84, 84)
+                                .addComponent(cmdExchange, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(83, 83, 83)));
         panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ibDescription)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbQuantity)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbPoint)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cmdExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-        );
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ibDescription)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbQuantity)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbPoint)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cmdExchange, javax.swing.GroupLayout.PREFERRED_SIZE, 35,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE));
     }// </editor-fold>//GEN-END:initComponents
 
     @Override
@@ -176,13 +185,12 @@ public class CardVoucher extends javax.swing.JPanel {
         super.paintComponent(g);
     }
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private RTDRestaurant.View.Swing.Button cmdExchange;
+    private BIA.View.Swing.Button cmdExchange;
     private javax.swing.JLabel ibDescription;
     private javax.swing.JLabel img;
     private javax.swing.JLabel lbPoint;
     private javax.swing.JLabel lbQuantity;
-    private RTDRestaurant.View.Swing.PanelRound panelRound1;
+    private BIA.View.Swing.PanelRound panelRound1;
     // End of variables declaration//GEN-END:variables
 }

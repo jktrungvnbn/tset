@@ -1,4 +1,4 @@
-package RTDRestaurant.Model;
+package BIA.Model;
 
 //Thông tin các nguyên liệu có trong kho
 public class ModelKho {

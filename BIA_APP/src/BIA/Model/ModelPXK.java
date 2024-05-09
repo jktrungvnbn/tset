@@ -1,5 +1,5 @@
 
-package RTDRestaurant.Model;
+package BIA.Model;
 
 
 //Thông tin phiếu xuất kho

@@ -1,12 +1,12 @@
-package RTDRestaurant.Controller.Service;
+package BIA.Controller.Service;
 
-import RTDRestaurant.Controller.Connection.DatabaseConnection;
-import RTDRestaurant.Model.ModelCTHD;
-import RTDRestaurant.Model.ModelMonAn;
-import RTDRestaurant.Model.ModelKhachHang;
-import RTDRestaurant.Model.ModelHoaDon;
-import RTDRestaurant.Model.ModelVoucher;
-import RTDRestaurant.Model.ModelBan;
+import BIA.Controller.Connection.DatabaseConnection;
+import BIA.Model.ModelCTHD;
+import BIA.Model.ModelMonAn;
+import BIA.Model.ModelKhachHang;
+import BIA.Model.ModelHoaDon;
+import BIA.Model.ModelVoucher;
+import BIA.Model.ModelBan;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;

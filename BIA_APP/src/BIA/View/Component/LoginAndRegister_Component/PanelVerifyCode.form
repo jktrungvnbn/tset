@@ -39,7 +39,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="RTDRestaurant.View.Swing.PanelRound" name="panelRound2">
+    <Container class="BIA.View.Swing.PanelRound" name="panelRound2">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[450, 196]"/>
@@ -109,9 +109,9 @@
             <Property name="text" type="java.lang.String" value="Ki&#xea;&#x309;m tra Email cu&#x309;a ba&#x323;n &#x111;&#xea;&#x309; l&#xe2;&#x301;y Ma&#x303; xa&#x301;c minh"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtCode">
+        <Component class="BIA.View.Swing.MyTextField" name="txtCode">
         </Component>
-        <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdCancel">
+        <Component class="BIA.View.Swing.ButtonOutLine" name="cmdCancel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3a" green="21" red="ed" type="rgb"/>
@@ -125,7 +125,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdCancelActionPerformed"/>
           </Events>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdOK">
+        <Component class="BIA.View.Swing.ButtonOutLine" name="cmdOK">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="8e" green="99" red="11" type="rgb"/>

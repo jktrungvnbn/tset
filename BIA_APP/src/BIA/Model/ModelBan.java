@@ -1,5 +1,5 @@
 
-package RTDRestaurant.Model;
+package BIA.Model;
 
 //Class chứa thông tin về bàn gồm :ID Bàn, Tên Bàn, Loại bàn
 public class ModelBan {

@@ -1,4 +1,4 @@
-package RTDRestaurant.Model;
+package BIA.Model;
 
 import java.awt.Color;
 

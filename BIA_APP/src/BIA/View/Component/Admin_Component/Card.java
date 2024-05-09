@@ -1,7 +1,7 @@
 
-package RTDRestaurant.View.Component.Admin_Component;
+package BIA.View.Component.Admin_Component;
 
-import RTDRestaurant.Model.ModelCard;
+import BIA.Model.ModelCard;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;

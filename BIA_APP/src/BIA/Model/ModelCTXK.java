@@ -1,5 +1,5 @@
 
-package RTDRestaurant.Model;
+package BIA.Model;
 
 //Thông tin chi tiết phiếu xuất kho
 public class ModelCTXK {

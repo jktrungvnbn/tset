@@ -1,10 +1,10 @@
 
-package RTDRestaurant.Controller.Service;
+package BIA.Controller.Service;
 
 
-import RTDRestaurant.Controller.Connection.DatabaseConnection;
-import RTDRestaurant.Model.ModelLogin;
-import RTDRestaurant.Model.ModelNguoiDung;
+import BIA.Controller.Connection.DatabaseConnection;
+import BIA.Model.ModelLogin;
+import BIA.Model.ModelNguoiDung;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;

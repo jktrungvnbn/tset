@@ -1,6 +1,6 @@
-package RTDRestaurant.Controller.Service;
+package BIA.Controller.Service;
 
-import RTDRestaurant.Model.ModelMessage;
+import BIA.Model.ModelMessage;
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.MessagingException;

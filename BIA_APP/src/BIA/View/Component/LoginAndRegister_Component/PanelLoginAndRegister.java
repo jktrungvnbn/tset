@@ -1,10 +1,10 @@
-package RTDRestaurant.View.Component.LoginAndRegister_Component;
+package BIA.View.Component.LoginAndRegister_Component;
 
-import RTDRestaurant.Model.ModelLogin;
-import RTDRestaurant.Model.ModelNguoiDung;
-import RTDRestaurant.View.Swing.Button;
-import RTDRestaurant.View.Swing.MyPasswordField;
-import RTDRestaurant.View.Swing.MyTextField;
+import BIA.Model.ModelLogin;
+import BIA.Model.ModelNguoiDung;
+import BIA.View.Swing.Button;
+import BIA.View.Swing.MyPasswordField;
+import BIA.View.Swing.MyTextField;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;

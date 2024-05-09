@@ -1,4 +1,4 @@
-package RTDRestaurant.Model;
+package BIA.Model;
 
 //Thông tin phiếu nhập kho
 public class ModelPNK {

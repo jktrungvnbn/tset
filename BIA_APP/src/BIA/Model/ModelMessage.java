@@ -1,5 +1,5 @@
 
-package RTDRestaurant.Model;
+package BIA.Model;
 
 // Model Thông báo tới màn hình
 public class ModelMessage {

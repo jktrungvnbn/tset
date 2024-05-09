@@ -1,5 +1,5 @@
 
-package RTDRestaurant.Model;
+package BIA.Model;
 
 // Model Thông tin đăng nhập (Email, mật khẩu)
 public class ModelLogin {

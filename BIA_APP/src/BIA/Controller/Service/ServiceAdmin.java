@@ -1,11 +1,11 @@
-package RTDRestaurant.Controller.Service;
+package BIA.Controller.Service;
 
-import RTDRestaurant.Controller.Connection.DatabaseConnection;
-import RTDRestaurant.Model.ModelChart;
-import RTDRestaurant.Model.ModelHoaDon;
-import RTDRestaurant.Model.ModelMonAn;
-import RTDRestaurant.Model.ModelNhanVien;
-import RTDRestaurant.Model.ModelPNK;
+import BIA.Controller.Connection.DatabaseConnection;
+import BIA.Model.ModelChart;
+import BIA.Model.ModelHoaDon;
+import BIA.Model.ModelMonAn;
+import BIA.Model.ModelNhanVien;
+import BIA.Model.ModelPNK;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
