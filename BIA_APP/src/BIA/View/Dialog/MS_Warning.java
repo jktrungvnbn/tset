@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Dialog;
+package BIA.View.Dialog;
 
 import java.awt.Color;
 import java.awt.Frame;
@@ -15,7 +15,6 @@ public class MS_Warning extends javax.swing.JDialog {
     private final Animator animator;
     private boolean show = true;
     private Frame frame;
-    
 
     public MS_Warning(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -45,7 +44,8 @@ public class MS_Warning extends javax.swing.JDialog {
         animator.setResolution(0);
         animator.setAcceleration(0.5f);
     }
-    //Hiện cảnh báo khách hàng chưa đặt bàn
+
+    // Hiện cảnh báo khách hàng chưa đặt bàn
     public void WarningBook() {
         setLocationRelativeTo(frame);
         lbTitle.setText("QUÝ KHÁCH CHƯA ĐẶT BÀN !!!");
@@ -53,15 +53,17 @@ public class MS_Warning extends javax.swing.JDialog {
         animator.start();
         setVisible(true);
     }
-    //Hiện cảnh báo chưa đủ điểm tích lũy để đổi Voucher
+
+    // Hiện cảnh báo chưa đủ điểm tích lũy để đổi Voucher
     public void WarningExchange(int need) {
         setLocationRelativeTo(frame);
         lbTitle.setText("QUÝ KHÁCH CHƯA ĐỦ XU !!!");
-        lbMessage.setText("Quý khách còn thiếu "+need+" xu để đổi Voucher này.");
+        lbMessage.setText("Quý khách còn thiếu " + need + " xu để đổi Voucher này.");
         animator.start();
         setVisible(true);
     }
-    //Thông báo nhập thiếu thông tin
+
+    // Thông báo nhập thiếu thông tin
     public void WarningLackofInfo() {
         setLocationRelativeTo(frame);
         lbTitle.setText("THIẾU THÔNG TIN !!!");
@@ -69,7 +71,8 @@ public class MS_Warning extends javax.swing.JDialog {
         animator.start();
         setVisible(true);
     }
-    //Thông báo không thể sa thải Quản lý
+
+    // Thông báo không thể sa thải Quản lý
     public void WarningFireAdmin() {
         setLocationRelativeTo(frame);
         lbTitle.setText("KHÔNG ĐỦ QUYỀN HẠN !!!");
@@ -77,11 +80,13 @@ public class MS_Warning extends javax.swing.JDialog {
         animator.start();
         setVisible(true);
     }
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRound1 = new RTDRestaurant.View.Swing.PanelRound();
+        panelRound1 = new BIA.View.Swing.PanelRound();
         lbTitle = new javax.swing.JLabel();
         lbMessage = new javax.swing.JLabel();
         lbIcon = new javax.swing.JLabel();
@@ -118,60 +123,64 @@ public class MS_Warning extends javax.swing.JDialog {
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(30, 30, 30))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(217, 217, 217)
-                .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(189, 189, 189)
-                .addComponent(cmdClose)
-                .addContainerGap())
-        );
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addGroup(
+                                        panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(30, 30, 30))
+                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addGap(217, 217, 217)
+                                .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(189, 189, 189)
+                                .addComponent(cmdClose)
+                                .addContainerGap()));
         panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lbIcon))
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(cmdClose)))
-                .addGap(20, 20, 20)
-                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(lbMessage)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addGroup(
+                                        panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(panelRound1Layout.createSequentialGroup()
+                                                        .addGap(20, 20, 20)
+                                                        .addComponent(lbIcon))
+                                                .addGroup(panelRound1Layout.createSequentialGroup()
+                                                        .addContainerGap()
+                                                        .addComponent(cmdClose)))
+                                .addGap(20, 20, 20)
+                                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(lbMessage)
+                                .addContainerGap(20, Short.MAX_VALUE)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmdCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdCloseMouseClicked
+    private void cmdCloseMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cmdCloseMouseClicked
         closeMenu();
-    }//GEN-LAST:event_cmdCloseMouseClicked
+    }// GEN-LAST:event_cmdCloseMouseClicked
 
     private void closeMenu() {
         if (animator.isRunning()) {
@@ -196,6 +205,6 @@ public class MS_Warning extends javax.swing.JDialog {
     private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbMessage;
     private javax.swing.JLabel lbTitle;
-    private RTDRestaurant.View.Swing.PanelRound panelRound1;
+    private BIA.View.Swing.PanelRound panelRound1;
     // End of variables declaration//GEN-END:variables
 }

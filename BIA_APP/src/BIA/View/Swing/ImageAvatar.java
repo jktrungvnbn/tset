@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
 import java.awt.AlphaComposite;
 import java.awt.Composite;

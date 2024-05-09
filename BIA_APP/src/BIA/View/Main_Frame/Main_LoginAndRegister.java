@@ -1,17 +1,17 @@
 
-package RTDRestaurant.View.Main_Frame;
+package BIA.View.Main_Frame;
 
-import RTDRestaurant.Controller.Connection.DatabaseConnection;
-import RTDRestaurant.Controller.Service.ServiceMail;
-import RTDRestaurant.Controller.Service.ServiceUser;
-import RTDRestaurant.Model.ModelLogin;
-import RTDRestaurant.Model.ModelMessage;
-import RTDRestaurant.Model.ModelNguoiDung;
-import RTDRestaurant.View.Component.LoginAndRegister_Component.Message;
-import RTDRestaurant.View.Component.LoginAndRegister_Component.PanelCover;
-import RTDRestaurant.View.Component.LoginAndRegister_Component.PanelLoading;
-import RTDRestaurant.View.Component.LoginAndRegister_Component.PanelLoginAndRegister;
-import RTDRestaurant.View.Component.LoginAndRegister_Component.PanelVerifyCode;
+import BIA.Controller.Connection.DatabaseConnection;
+import BIA.Controller.Service.ServiceMail;
+import BIA.Controller.Service.ServiceUser;
+import BIA.Model.ModelLogin;
+import BIA.Model.ModelMessage;
+import BIA.Model.ModelNguoiDung;
+import BIA.View.Component.LoginAndRegister_Component.Message;
+import BIA.View.Component.LoginAndRegister_Component.PanelCover;
+import BIA.View.Component.LoginAndRegister_Component.PanelLoading;
+import BIA.View.Component.LoginAndRegister_Component.PanelLoginAndRegister;
+import BIA.View.Component.LoginAndRegister_Component.PanelVerifyCode;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

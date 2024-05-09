@@ -1,7 +1,7 @@
-package RTDRestaurant.View.Dialog;
+package BIA.View.Dialog;
 
-import RTDRestaurant.Controller.Service.ServiceUser;
-import RTDRestaurant.Model.ModelNguoiDung;
+import BIA.Controller.Service.ServiceUser;
+import BIA.Model.ModelNguoiDung;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.GradientPaint;
@@ -74,8 +74,8 @@ public class MS_ChangePassword extends javax.swing.JDialog {
                 try {
                     String newPass = String.valueOf(txtnewPass.getPassword());
                     String confmPass = String.valueOf(txtconfirm.getPassword());
-                    //Nếu mật khẩu mới và xác nhận mật khẩu giống nhau thực 
-                    //hiện đổi mật khẩu và hiển thị thông báo đổi thành công
+                    // Nếu mật khẩu mới và xác nhận mật khẩu giống nhau thực
+                    // hiện đổi mật khẩu và hiển thị thông báo đổi thành công
                     if (newPass.equals(confmPass)) {
                         lbMessage.setBackground(new Color(186, 225, 186));
                         lbMessage.setForeground(new Color(60, 117, 60));
@@ -83,7 +83,8 @@ public class MS_ChangePassword extends javax.swing.JDialog {
                         lbMessage.setVisible(true);
                         service.changePassword(user.getUserID(), newPass);
                         user.setPassword(newPass);
-                    } //Nếu mật khẩu mới và xác nhận mật khẩu không giống nhau thì thông báo xác nhận mật khẩu không đúng
+                    } // Nếu mật khẩu mới và xác nhận mật khẩu không giống nhau thì thông báo xác nhận
+                      // mật khẩu không đúng
                     else {
                         lbMessage.setBackground(new Color(249, 181, 181));
                         lbMessage.setForeground(new Color(130, 38, 38));
@@ -101,20 +102,21 @@ public class MS_ChangePassword extends javax.swing.JDialog {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRound1 = new RTDRestaurant.View.Swing.PanelRound();
+        panelRound1 = new BIA.View.Swing.PanelRound();
         lbTitle = new javax.swing.JLabel();
-        cmdOK = new RTDRestaurant.View.Swing.ButtonOutLine();
-        cmdCancel = new RTDRestaurant.View.Swing.ButtonOutLine();
+        cmdOK = new BIA.View.Swing.ButtonOutLine();
+        cmdCancel = new BIA.View.Swing.ButtonOutLine();
         lbIcon = new javax.swing.JLabel();
         lbnewPass = new javax.swing.JLabel();
         lbConfirmPass = new javax.swing.JLabel();
         lbMessage = new javax.swing.JLabel();
         cmdClose = new javax.swing.JLabel();
-        txtconfirm = new RTDRestaurant.View.Swing.MyPasswordField();
-        txtnewPass = new RTDRestaurant.View.Swing.MyPasswordField();
+        txtconfirm = new BIA.View.Swing.MyPasswordField();
+        txtnewPass = new BIA.View.Swing.MyPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(215, 215, 215));
@@ -199,95 +201,123 @@ public class MS_ChangePassword extends javax.swing.JDialog {
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbMessage, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbTitle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbnewPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(panelRound1Layout.createSequentialGroup()
-                                .addGap(0, 31, Short.MAX_VALUE)
-                                .addComponent(lbConfirmPass)))
-                        .addGap(44, 44, 44)
-                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtconfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtnewPass, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(45, 45, 45))
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(107, 107, 107)))
-                .addGap(30, 30, 30))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbIcon)
-                .addGap(241, 241, 241))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(cmdClose, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addGroup(panelRound1Layout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lbMessage, javax.swing.GroupLayout.Alignment.LEADING,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lbTitle, javax.swing.GroupLayout.Alignment.LEADING,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                                .addGroup(panelRound1Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(lbnewPass, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                                                .addGap(0, 31, Short.MAX_VALUE)
+                                                                .addComponent(lbConfirmPass)))
+                                                .addGap(44, 44, 44)
+                                                .addGroup(panelRound1Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(txtconfirm,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(txtnewPass,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(45, 45, 45))
+                                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                                .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 103,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(61, 61, 61)
+                                                .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 103,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(107, 107, 107)))
+                                .addGap(30, 30, 30))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbIcon)
+                                .addGap(241, 241, 241))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(cmdClose, javax.swing.GroupLayout.PREFERRED_SIZE, 34,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)));
         panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addComponent(cmdClose, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbnewPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtnewPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbConfirmPass, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                    .addComponent(txtconfirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
-        );
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addComponent(cmdClose, javax.swing.GroupLayout.PREFERRED_SIZE, 32,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 64,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 28,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(panelRound1Layout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(lbnewPass, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtnewPass, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35,
+                                        Short.MAX_VALUE)
+                                .addGroup(
+                                        panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lbConfirmPass, javax.swing.GroupLayout.DEFAULT_SIZE, 55,
+                                                        Short.MAX_VALUE)
+                                                .addComponent(txtconfirm, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(50, 50, 50)
+                                .addGroup(panelRound1Layout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 34,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 34,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(24, 24, 24)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap()));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap()));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmdOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdOKActionPerformed
+    private void cmdOKActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cmdOKActionPerformed
 
-    }//GEN-LAST:event_cmdOKActionPerformed
+    }// GEN-LAST:event_cmdOKActionPerformed
 
-    private void cmdCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCancelActionPerformed
+    private void cmdCancelActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cmdCancelActionPerformed
         closeMenu();
-    }//GEN-LAST:event_cmdCancelActionPerformed
+    }// GEN-LAST:event_cmdCancelActionPerformed
 
-    private void cmdCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdCloseMouseClicked
+    private void cmdCloseMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cmdCloseMouseClicked
         closeMenu();
-    }//GEN-LAST:event_cmdCloseMouseClicked
+    }// GEN-LAST:event_cmdCloseMouseClicked
 
-    private void txtconfirmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtconfirmMouseClicked
+    private void txtconfirmMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_txtconfirmMouseClicked
         if (txtconfirm.getSuffixIcon().equals(ihide)) {
             txtconfirm.setSuffixIcon(ishow);
             txtconfirm.setEchoChar((char) 0);
@@ -296,9 +326,9 @@ public class MS_ChangePassword extends javax.swing.JDialog {
             txtconfirm.setSuffixIcon(ihide);
             txtconfirm.setEchoChar(def);
         }
-    }//GEN-LAST:event_txtconfirmMouseClicked
+    }// GEN-LAST:event_txtconfirmMouseClicked
 
-    private void txtnewPassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtnewPassMouseClicked
+    private void txtnewPassMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_txtnewPassMouseClicked
         if (txtnewPass.getSuffixIcon().equals(ihide)) {
             txtnewPass.setSuffixIcon(ishow);
             txtnewPass.setEchoChar((char) 0);
@@ -307,7 +337,7 @@ public class MS_ChangePassword extends javax.swing.JDialog {
             txtnewPass.setSuffixIcon(ihide);
             txtnewPass.setEchoChar(def);
         }
-    }//GEN-LAST:event_txtnewPassMouseClicked
+    }// GEN-LAST:event_txtnewPassMouseClicked
 
     private void closeMenu() {
         if (animator.isRunning()) {
@@ -328,16 +358,16 @@ public class MS_ChangePassword extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private RTDRestaurant.View.Swing.ButtonOutLine cmdCancel;
+    private BIA.View.Swing.ButtonOutLine cmdCancel;
     private javax.swing.JLabel cmdClose;
-    private RTDRestaurant.View.Swing.ButtonOutLine cmdOK;
+    private BIA.View.Swing.ButtonOutLine cmdOK;
     private javax.swing.JLabel lbConfirmPass;
     private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbMessage;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JLabel lbnewPass;
-    private RTDRestaurant.View.Swing.PanelRound panelRound1;
-    private RTDRestaurant.View.Swing.MyPasswordField txtconfirm;
-    private RTDRestaurant.View.Swing.MyPasswordField txtnewPass;
+    private BIA.View.Swing.PanelRound panelRound1;
+    private BIA.View.Swing.MyPasswordField txtconfirm;
+    private BIA.View.Swing.MyPasswordField txtnewPass;
     // End of variables declaration//GEN-END:variables
 }

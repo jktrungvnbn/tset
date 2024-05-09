@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing.Chart.BlankChart;
+package BIA.View.Swing.Chart.BlankChart;
 
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
@@ -11,9 +11,11 @@ public abstract class BlankPlotChatRender {
 
     public abstract void renderSeries(BlankPlotChart chart, Graphics2D g2, SeriesSize size, int index);
 
-    public abstract void renderSeries(BlankPlotChart chart, Graphics2D g2, SeriesSize size, int index, List<Path2D.Double> gra);
+    public abstract void renderSeries(BlankPlotChart chart, Graphics2D g2, SeriesSize size, int index,
+            List<Path2D.Double> gra);
 
-    public abstract boolean mouseMoving(BlankPlotChart chart, MouseEvent evt, Graphics2D g2, SeriesSize size, int index);
+    public abstract boolean mouseMoving(BlankPlotChart chart, MouseEvent evt, Graphics2D g2, SeriesSize size,
+            int index);
 
     public abstract void renderGraphics(Graphics2D g2, List<Path2D.Double> gra);
 

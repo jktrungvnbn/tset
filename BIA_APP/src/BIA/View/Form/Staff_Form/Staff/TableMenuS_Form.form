@@ -106,7 +106,7 @@
         <Property name="iconTextGap" type="int" value="10"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtSearch">
+    <Component class="BIA.View.Swing.MyTextField" name="txtSearch">
       <Properties>
         <Property name="prefixIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/loupe (1).png"/>

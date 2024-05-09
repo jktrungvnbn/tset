@@ -1,8 +1,8 @@
-package RTDRestaurant.View.Form.Staff_Form.Admin;
+package BIA.View.Form.Staff_Form.Admin;
 
-import RTDRestaurant.Controller.Service.ServiceAdmin;
-import RTDRestaurant.Model.ModelCard;
-import RTDRestaurant.Model.ModelChart;
+import BIA.Controller.Service.ServiceAdmin;
+import BIA.Model.ModelCard;
+import BIA.Model.ModelChart;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
@@ -29,9 +29,9 @@ public class RevenueReport_Form extends javax.swing.JPanel {
         service = new ServiceAdmin();
         df = new DecimalFormat("##,###,###");
         setCurrentDate();
-        //Thêm data cho Card
+        // Thêm data cho Card
         initCard("Hôm nay");
-        //Thêm data cho Biểu đồ
+        // Thêm data cho Biểu đồ
         initChart();
 
     }
@@ -57,26 +57,35 @@ public class RevenueReport_Form extends javax.swing.JPanel {
                 pre_expenses = service.getPreMonthCostNK();
                 pre_profit = pre_revenue - pre_expenses;
                 if (revenue > pre_revenue) {
-                    descR = "Tăng " + (Math.round((((double) revenue - pre_revenue) / pre_revenue) * 100) + "% so với tháng trước");
+                    descR = "Tăng " + (Math.round((((double) revenue - pre_revenue) / pre_revenue) * 100)
+                            + "% so với tháng trước");
                 } else {
-                    descR = "Giảm " + (Math.round((((double) pre_revenue - revenue) / pre_revenue) * 100) + "% so với tháng trước");
+                    descR = "Giảm " + (Math.round((((double) pre_revenue - revenue) / pre_revenue) * 100)
+                            + "% so với tháng trước");
                 }
 
                 if (expenses > pre_expenses) {
-                    descE = "Tăng " + (Math.round((((double) expenses - pre_expenses) / pre_expenses) * 100) + "% so với tháng trước");
+                    descE = "Tăng " + (Math.round((((double) expenses - pre_expenses) / pre_expenses) * 100)
+                            + "% so với tháng trước");
                 } else {
-                    descE = "Giảm " + (Math.round((((double) pre_expenses - expenses) / pre_expenses) * 100) + "% so với tháng trước");
+                    descE = "Giảm " + (Math.round((((double) pre_expenses - expenses) / pre_expenses) * 100)
+                            + "% so với tháng trước");
                 }
 
                 if (profit > pre_profit) {
-                    descP = "Tăng " + (Math.round((((double) profit - pre_profit) / pre_profit) * 100) + "% so với tháng trước");
+                    descP = "Tăng " + (Math.round((((double) profit - pre_profit) / pre_profit) * 100)
+                            + "% so với tháng trước");
                 } else {
-                    descP = "Giảm " + (Math.round((((double) pre_profit - profit) / pre_profit) * 100) + "% so với tháng trước");
+                    descP = "Giảm " + (Math.round((((double) pre_profit - profit) / pre_profit) * 100)
+                            + "% so với tháng trước");
                 }
             }
-            Crevenue.setData(new ModelCard(new ImageIcon(getClass().getResource("/Icons/revenue.png")), "Doanh Thu", df.format(revenue) + "đ", descR));
-            Cexpenses.setData(new ModelCard(new ImageIcon(getClass().getResource("/Icons/expenses.png")), "Chi Phí", df.format(expenses) + "đ", descE));
-            Cprofit.setData(new ModelCard(new ImageIcon(getClass().getResource("/Icons/profit.png")), "Lợi Nhuận", df.format(profit) + "đ", descP));
+            Crevenue.setData(new ModelCard(new ImageIcon(getClass().getResource("/Icons/revenue.png")), "Doanh Thu",
+                    df.format(revenue) + "đ", descR));
+            Cexpenses.setData(new ModelCard(new ImageIcon(getClass().getResource("/Icons/expenses.png")), "Chi Phí",
+                    df.format(expenses) + "đ", descE));
+            Cprofit.setData(new ModelCard(new ImageIcon(getClass().getResource("/Icons/profit.png")), "Lợi Nhuận",
+                    df.format(profit) + "đ", descP));
 
             Crevenue.repaint();
             Cexpenses.repaint();
@@ -109,20 +118,21 @@ public class RevenueReport_Form extends javax.swing.JPanel {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbTitle = new javax.swing.JLabel();
         lbprofit = new javax.swing.JLabel();
         panelCard = new javax.swing.JLayeredPane();
-        Crevenue = new RTDRestaurant.View.Component.Admin_Component.Card();
-        Cexpenses = new RTDRestaurant.View.Component.Admin_Component.Card();
-        Cprofit = new RTDRestaurant.View.Component.Admin_Component.Card();
+        Crevenue = new BIA.View.Component.Admin_Component.Card();
+        Cexpenses = new BIA.View.Component.Admin_Component.Card();
+        Cprofit = new BIA.View.Component.Admin_Component.Card();
         lbDate = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         lbchart = new javax.swing.JLabel();
-        lineChart = new RTDRestaurant.View.Swing.Chart.LineChart();
+        lineChart = new BIA.View.Swing.Chart.LineChart();
         filter = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(247, 247, 247));
@@ -181,60 +191,73 @@ public class RevenueReport_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lineChart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelCard, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(lbTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbchart, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbprofit, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(filter, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lineChart, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(panelCard, javax.swing.GroupLayout.Alignment.LEADING,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout
+                                                .createSequentialGroup()
+                                                .addComponent(lbTitle)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 250,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout
+                                                .createSequentialGroup()
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(lbchart,
+                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(lbprofit,
+                                                                javax.swing.GroupLayout.Alignment.LEADING))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(filter, javax.swing.GroupLayout.PREFERRED_SIZE, 140,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap()));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbDate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(filter, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(lbprofit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelCard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(lbchart)
-                .addGap(10, 10, 10)
-                .addComponent(lineChart, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lbDate))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(filter, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                                        .addComponent(lbprofit, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelCard, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(15, 15, 15)
+                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(lbchart)
+                                .addGap(10, 10, 10)
+                                .addComponent(lineChart, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                                .addContainerGap()));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterActionPerformed
+    private void filterActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_filterActionPerformed
         initCard(filter.getSelectedItem().toString());
-    }//GEN-LAST:event_filterActionPerformed
-
+    }// GEN-LAST:event_filterActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private RTDRestaurant.View.Component.Admin_Component.Card Cexpenses;
-    private RTDRestaurant.View.Component.Admin_Component.Card Cprofit;
-    private RTDRestaurant.View.Component.Admin_Component.Card Crevenue;
+    private BIA.View.Component.Admin_Component.Card Cexpenses;
+    private BIA.View.Component.Admin_Component.Card Cprofit;
+    private BIA.View.Component.Admin_Component.Card Crevenue;
     private javax.swing.JComboBox<String> filter;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -242,7 +265,7 @@ public class RevenueReport_Form extends javax.swing.JPanel {
     private javax.swing.JLabel lbTitle;
     private javax.swing.JLabel lbchart;
     private javax.swing.JLabel lbprofit;
-    private RTDRestaurant.View.Swing.Chart.LineChart lineChart;
+    private BIA.View.Swing.Chart.LineChart lineChart;
     private javax.swing.JLayeredPane panelCard;
     // End of variables declaration//GEN-END:variables
 }

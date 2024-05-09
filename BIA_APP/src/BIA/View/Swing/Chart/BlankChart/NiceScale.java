@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing.Chart.BlankChart;
+package BIA.View.Swing.Chart.BlankChart;
 
 public class NiceScale {
 
@@ -24,8 +24,8 @@ public class NiceScale {
     }
 
     private double niceNum(final double RANGE, final boolean ROUND) {
-        double exponent;     // exponent of RANGE
-        double fraction;     // fractional part of RANGE
+        double exponent; // exponent of RANGE
+        double fraction; // fractional part of RANGE
         double niceFraction; // nice, rounded fraction
 
         exponent = Math.floor(Math.log10(RANGE));

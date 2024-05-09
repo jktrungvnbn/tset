@@ -1,12 +1,12 @@
 
-package RTDRestaurant.View.Form.Staff_Form.WarehouseStaff;
+package BIA.View.Form.Staff_Form.WarehouseStaff;
 
-import RTDRestaurant.Controller.Service.ServiceStaff;
-import RTDRestaurant.Model.ModelNguyenLieu;
-import RTDRestaurant.View.Dialog.MS_Confirm;
-import RTDRestaurant.View.Form.MainForm;
-import RTDRestaurant.View.Main_Frame.Main_WarehouseStaff_Frame;
-import RTDRestaurant.View.Swing.CustomScrollBar.ScrollBarCustom;
+import BIA.Controller.Service.ServiceStaff;
+import BIA.Model.ModelNguyenLieu;
+import BIA.View.Dialog.MS_Confirm;
+import BIA.View.Form.MainForm;
+import BIA.View.Main_Frame.Main_WarehouseStaff_Frame;
+import BIA.View.Swing.CustomScrollBar.ScrollBarCustom;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +17,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
-
 public class Ingredient_Form extends javax.swing.JPanel {
 
     private ServiceStaff service;
@@ -25,102 +24,108 @@ public class Ingredient_Form extends javax.swing.JPanel {
     private final MainForm main;
     private MS_Confirm obj;
     DecimalFormat df;
-    
+
     public Ingredient_Form(MainForm main) {
-        this.main=main;
-        service=new ServiceStaff();
+        this.main = main;
+        service = new ServiceStaff();
         initComponents();
         init();
     }
 
-    public void init(){
+    public void init() {
         obj = new MS_Confirm(Main_WarehouseStaff_Frame.getFrames()[0], true);
         txtSearch.setHint("Tìm kiếm Nguyên Liệu . . .");
         jScrollPane1.setVerticalScrollBar(new ScrollBarCustom());
         jScrollPane1.getViewport().setBackground(Color.WHITE);
         df = new DecimalFormat("##,###,###");
-        //Thêm data cho Menu
+        // Thêm data cho Menu
         initTable();
         getUserSales();
-        //Them event cho Button ThemNL
-        cmdAdd.addActionListener(new ActionListener(){
+        // Them event cho Button ThemNL
+        cmdAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                main.showForm(new InsertAndUpdate_Ingredient_Form(main,null));
+                main.showForm(new InsertAndUpdate_Ingredient_Form(main, null));
             }
         });
-        //Them event cho Button XoaNL
-        cmdDelete.addActionListener(new ActionListener(){
+        // Them event cho Button XoaNL
+        cmdDelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    int row=tableNL.getSelectedRow();
-                    ModelNguyenLieu data=service.getNLbyID(tableNL.getFirstCol_RowSelected(row));
-                    boolean delete=obj.Staff_ConfirmDelete(data);
-                    if(delete==true){
-                        DefaultTableModel model=(DefaultTableModel) tableNL.getModel();
+                    int row = tableNL.getSelectedRow();
+                    ModelNguyenLieu data = service.getNLbyID(tableNL.getFirstCol_RowSelected(row));
+                    boolean delete = obj.Staff_ConfirmDelete(data);
+                    if (delete == true) {
+                        DefaultTableModel model = (DefaultTableModel) tableNL.getModel();
                         model.removeRow(row);
                         tableNL.repaint();
                     }
                 } catch (SQLException ex) {
                     Logger.getLogger(Ingredient_Form.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                
+
             }
         });
-        //Them event cho Button SuaNL
-        cmdUpdate.addActionListener(new ActionListener(){
+        // Them event cho Button SuaNL
+        cmdUpdate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    ModelNguyenLieu data=service.getNLbyID(tableNL.getFirstCol_RowSelected(tableNL.getSelectedRow()));
-                    main.showForm(new InsertAndUpdate_Ingredient_Form(main,data));
+                    ModelNguyenLieu data = service.getNLbyID(tableNL.getFirstCol_RowSelected(tableNL.getSelectedRow()));
+                    main.showForm(new InsertAndUpdate_Ingredient_Form(main, data));
                 } catch (SQLException ex) {
                     Logger.getLogger(Ingredient_Form.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
-        
+
     }
-    public void getUserSales(){
-             txtTong.setText(list.size()+"");
+
+    public void getUserSales() {
+        txtTong.setText(list.size() + "");
     }
-    public void initTable(){
+
+    public void initTable() {
         try {
             list = service.MenuNL();
-            for(ModelNguyenLieu data:list){  
-                tableNL.addRow(new Object[]{data.getId(),data.getTenNL(),df.format(data.getDonGia())+"đ",data.getDvt()});
+            for (ModelNguyenLieu data : list) {
+                tableNL.addRow(new Object[] { data.getId(), data.getTenNL(), df.format(data.getDonGia()) + "đ",
+                        data.getDvt() });
             }
-        }catch(SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
-    public void searchTable(String txt){
+
+    public void searchTable(String txt) {
         tableNL.removeAllRow();
-        for(ModelNguyenLieu data:list){
-            if((data.getTenNL()).toLowerCase().contains(txt.toLowerCase())){
-                tableNL.addRow(new Object[]{data.getId(),data.getTenNL(),df.format(data.getDonGia())+"đ",data.getDvt()});
+        for (ModelNguyenLieu data : list) {
+            if ((data.getTenNL()).toLowerCase().contains(txt.toLowerCase())) {
+                tableNL.addRow(new Object[] { data.getId(), data.getTenNL(), df.format(data.getDonGia()) + "đ",
+                        data.getDvt() });
             }
         }
         tableNL.repaint();
         tableNL.revalidate();
     }
-    
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbTitle = new javax.swing.JLabel();
-        txtSearch = new RTDRestaurant.View.Swing.MyTextField();
+        txtSearch = new BIA.View.Swing.MyTextField();
         lbTong = new javax.swing.JLabel();
-        txtTong = new RTDRestaurant.View.Swing.MyTextField();
+        txtTong = new BIA.View.Swing.MyTextField();
         lbNL = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableNL = new RTDRestaurant.View.Swing.Table();
-        cmdAdd = new RTDRestaurant.View.Swing.Button();
-        cmdUpdate = new RTDRestaurant.View.Swing.Button();
-        cmdDelete = new RTDRestaurant.View.Swing.Button();
+        tableNL = new BIA.View.Swing.Table();
+        cmdAdd = new BIA.View.Swing.Button();
+        cmdUpdate = new BIA.View.Swing.Button();
+        cmdDelete = new BIA.View.Swing.Button();
 
         setBackground(new java.awt.Color(247, 247, 247));
 
@@ -160,19 +165,18 @@ public class Ingredient_Form extends javax.swing.JPanel {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         tableNL.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
-                "Mã NL", "Tên nguyên liệu", "Đơn giá", "Đơn vị tính"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                },
+                new String[] {
+                        "Mã NL", "Tên nguyên liệu", "Đơn giá", "Đơn vị tính"
+                }) {
+            boolean[] canEdit = new boolean[] {
+                    false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         jScrollPane1.setViewportView(tableNL);
@@ -212,78 +216,98 @@ public class Ingredient_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 840, Short.MAX_VALUE)
-                    .addComponent(jSeparator2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lbTitle)
-                            .addComponent(lbNL))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                        .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(cmdDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 840,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jSeparator2)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(lbTong,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 184,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(50, 50, 50)
+                                                                .addComponent(txtTong,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(lbTitle)
+                                                        .addComponent(lbNL))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 348,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70,
+                                                        Short.MAX_VALUE)
+                                                .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(20, 20, 20)
+                                                .addComponent(cmdDelete, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(20, 20, 20)
+                                                .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap()));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(lbNL)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmdDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(lbNL)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cmdDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                                .addContainerGap()));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
-       
-        searchTable(txtSearch.getText().trim());
-    }//GEN-LAST:event_txtSearchActionPerformed
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtSearchActionPerformed
 
-    private void txtSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtSearchMouseEntered
-        
         searchTable(txtSearch.getText().trim());
-    }//GEN-LAST:event_txtSearchMouseEntered
+    }// GEN-LAST:event_txtSearchActionPerformed
 
+    private void txtSearchMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_txtSearchMouseEntered
+
+        searchTable(txtSearch.getText().trim());
+    }// GEN-LAST:event_txtSearchMouseEntered
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private RTDRestaurant.View.Swing.Button cmdAdd;
-    private RTDRestaurant.View.Swing.Button cmdDelete;
-    private RTDRestaurant.View.Swing.Button cmdUpdate;
+    private BIA.View.Swing.Button cmdAdd;
+    private BIA.View.Swing.Button cmdDelete;
+    private BIA.View.Swing.Button cmdUpdate;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbNL;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JLabel lbTong;
-    private RTDRestaurant.View.Swing.Table tableNL;
-    private RTDRestaurant.View.Swing.MyTextField txtSearch;
-    private RTDRestaurant.View.Swing.MyTextField txtTong;
+    private BIA.View.Swing.Table tableNL;
+    private BIA.View.Swing.MyTextField txtSearch;
+    private BIA.View.Swing.MyTextField txtTong;
     // End of variables declaration//GEN-END:variables
 }

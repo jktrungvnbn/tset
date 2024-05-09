@@ -1,22 +1,21 @@
 
-package RTDRestaurant.View.Form.Staff_Form.Staff;
+package BIA.View.Form.Staff_Form.Staff;
 
-import RTDRestaurant.View.Form.Customer_Form.*;
-import RTDRestaurant.Controller.Service.ServiceCustomer;
-import RTDRestaurant.Controller.Service.ServiceStaff;
-import RTDRestaurant.Model.ModelNguoiDung;
-import RTDRestaurant.Model.ModelBan;
-import RTDRestaurant.Model.ModelNhanVien;
-import RTDRestaurant.View.Component.Staff_Component.CardBanS;
-import RTDRestaurant.View.Form.MainForm;
-import RTDRestaurant.View.Swing.CustomScrollBar.ScrollBarCustom;
-import RTDRestaurant.View.Swing.WrapLayout;
+import BIA.View.Form.Customer_Form.*;
+import BIA.Controller.Service.ServiceCustomer;
+import BIA.Controller.Service.ServiceStaff;
+import BIA.Model.ModelNguoiDung;
+import BIA.Model.ModelBan;
+import BIA.Model.ModelNhanVien;
+import BIA.View.Component.Staff_Component.CardBanS;
+import BIA.View.Form.MainForm;
+import BIA.View.Swing.CustomScrollBar.ScrollBarCustom;
+import BIA.View.Swing.WrapLayout;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-
 
 public class TableMenuS_Form extends javax.swing.JPanel {
 
@@ -28,25 +27,25 @@ public class TableMenuS_Form extends javax.swing.JPanel {
     private ModelNhanVien staff;
     private final MainForm main;
 
-    public TableMenuS_Form(String floor,ModelNguoiDung user,MainForm main) {
-        this.floor=floor;
-        this.user=user;
-        this.main=main;
-        serviceC=new ServiceCustomer();
-        serviceS=new ServiceStaff();
+    public TableMenuS_Form(String floor, ModelNguoiDung user, MainForm main) {
+        this.floor = floor;
+        this.user = user;
+        this.main = main;
+        serviceC = new ServiceCustomer();
+        serviceS = new ServiceStaff();
         initComponents();
         init();
     }
 
-    public void init(){
+    public void init() {
         try {
-            staff=serviceS.getStaff(user.getUserID());
-            panel.setLayout(new WrapLayout(WrapLayout.LEADING,20,20));
+            staff = serviceS.getStaff(user.getUserID());
+            panel.setLayout(new WrapLayout(WrapLayout.LEADING, 20, 20));
             txtSearch.setHint("Tìm kiếm bàn . . .");
             jScrollPane1.setVerticalScrollBar(new ScrollBarCustom());
-            //Thêm data cho Menu
+            // Thêm data cho Menu
             initMenuTable();
-            
+
             switch (floor) {
                 case "Tang 1" -> {
                     lbTitle.setText("Quản lý Bàn/Tầng 1");
@@ -66,53 +65,55 @@ public class TableMenuS_Form extends javax.swing.JPanel {
         } catch (SQLException ex) {
             Logger.getLogger(TableMenuS_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
-          
- 
+
     }
-    public void initMenuTable(){
-        try {           
+
+    public void initMenuTable() {
+        try {
             list = serviceC.MenuTable(floor);
-            for(ModelBan data:list){
-            panel.add(new CardBanS(user,staff,data,main));
+            for (ModelBan data : list) {
+                panel.add(new CardBanS(user, staff, data, main));
             }
-        }catch(SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
-    public void searchTable(String txt){
+
+    public void searchTable(String txt) {
         panel.removeAll();
-        for(ModelBan data:list){
-            if(data.getName().toLowerCase().contains(txt.toLowerCase())){
-                panel.add(new CardBanS(user,staff,data,main));
+        for (ModelBan data : list) {
+            if (data.getName().toLowerCase().contains(txt.toLowerCase())) {
+                panel.add(new CardBanS(user, staff, data, main));
             }
         }
         panel.repaint();
         panel.revalidate();
     }
-    public void initMenuTableState(String txt){
+
+    public void initMenuTableState(String txt) {
         try {
-            list=serviceC.MenuTableState(floor,txt);
+            list = serviceC.MenuTableState(floor, txt);
             panel.removeAll();
-            for(ModelBan data:list){   
-            panel.add(new CardBanS(user,staff,data,main));
+            for (ModelBan data : list) {
+                panel.add(new CardBanS(user, staff, data, main));
             }
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(FoodMenu_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
         panel.repaint();
         panel.revalidate();
     }
-    
-   
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         panel = new javax.swing.JPanel();
         lbTitle = new javax.swing.JLabel();
-        txtSearch = new RTDRestaurant.View.Swing.MyTextField();
+        txtSearch = new BIA.View.Swing.MyTextField();
         state = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
 
@@ -126,13 +127,11 @@ public class TableMenuS_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 905, Short.MAX_VALUE)
-        );
+                panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 905, Short.MAX_VALUE));
         panelLayout.setVerticalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 536, Short.MAX_VALUE)
-        );
+                panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 536, Short.MAX_VALUE));
 
         jScrollPane1.setViewportView(panel);
 
@@ -157,7 +156,8 @@ public class TableMenuS_Form extends javax.swing.JPanel {
         state.setEditable(true);
         state.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         state.setForeground(new java.awt.Color(108, 91, 123));
-        state.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Còn trống", "Đang dùng bữa", "Đã đặt trước" }));
+        state.setModel(new javax.swing.DefaultComboBoxModel<>(
+                new String[] { "Tất cả", "Còn trống", "Đang dùng bữa", "Đã đặt trước" }));
         state.setToolTipText("Sắp xếp");
         state.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(164, 145, 145), 2));
         state.setFocusable(false);
@@ -174,49 +174,54 @@ public class TableMenuS_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 887, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbTitle)
-                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(7, 7, 7)
-                        .addComponent(state, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 887,
+                                                Short.MAX_VALUE)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(lbTitle)
+                                                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel1)
+                                                .addGap(7, 7, 7)
+                                                .addComponent(state, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(6, 6, 6)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(state)
-                    .addComponent(txtSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(lbTitle)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(state)
+                                        .addComponent(txtSearch, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane1)
+                                .addContainerGap()));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtSearchActionPerformed
         searchTable(txtSearch.getText().trim());
-    }//GEN-LAST:event_txtSearchActionPerformed
+    }// GEN-LAST:event_txtSearchActionPerformed
 
-    private void txtSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtSearchMouseEntered
+    private void txtSearchMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_txtSearchMouseEntered
         searchTable(txtSearch.getText().trim());
-    }//GEN-LAST:event_txtSearchMouseEntered
+    }// GEN-LAST:event_txtSearchMouseEntered
 
-    private void stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateActionPerformed
+    private void stateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_stateActionPerformed
         initMenuTableState(state.getSelectedItem().toString());
-    }//GEN-LAST:event_stateActionPerformed
-
+    }// GEN-LAST:event_stateActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -224,6 +229,6 @@ public class TableMenuS_Form extends javax.swing.JPanel {
     private javax.swing.JLabel lbTitle;
     private javax.swing.JPanel panel;
     private javax.swing.JComboBox<String> state;
-    private RTDRestaurant.View.Swing.MyTextField txtSearch;
+    private BIA.View.Swing.MyTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 }

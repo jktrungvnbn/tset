@@ -39,7 +39,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="RTDRestaurant.View.Swing.PanelRound" name="bg">
+    <Container class="BIA.View.Swing.PanelRound" name="bg">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="f7" green="f7" red="f7" type="rgb"/>
@@ -187,7 +187,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdOK">
+        <Component class="BIA.View.Swing.ButtonOutLine" name="cmdOK">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="8e" green="99" red="11" type="rgb"/>
@@ -205,7 +205,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdOKActionPerformed"/>
           </Events>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdCancel">
+        <Component class="BIA.View.Swing.ButtonOutLine" name="cmdCancel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3a" green="21" red="ed" type="rgb"/>
@@ -234,7 +234,7 @@
             <Property name="text" type="java.lang.String" value="Nga&#x300;y "/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtidHD">
+        <Component class="BIA.View.Swing.MyTextField" name="txtidHD">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="0"/>
@@ -262,7 +262,7 @@
             <Property name="orientation" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.Button" name="cmdExportBill">
+        <Component class="BIA.View.Swing.Button" name="cmdExportBill">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="7b" green="5b" red="6c" type="rgb"/>
@@ -290,7 +290,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="RTDRestaurant.View.Swing.Table" name="tableCTHD">
+            <Component class="BIA.View.Swing.Table" name="tableCTHD">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="3" rowCount="0">
@@ -340,7 +340,7 @@
             <Property name="text" type="java.lang.String" value="Ti&#xea;&#x300;n mo&#x301;n &#x103;n"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtTienmonan">
+        <Component class="BIA.View.Swing.MyTextField" name="txtTienmonan">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -364,7 +364,7 @@
             <Property name="text" type="java.lang.String" value="Ti&#xea;&#x300;n gia&#x309;m gia&#x301;"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtTiengiam">
+        <Component class="BIA.View.Swing.MyTextField" name="txtTiengiam">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -388,7 +388,7 @@
             <Property name="text" type="java.lang.String" value="T&#xf4;&#x309;ng ti&#xea;&#x300;n"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtTongtien">
+        <Component class="BIA.View.Swing.MyTextField" name="txtTongtien">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -412,7 +412,7 @@
             <Property name="text" type="java.lang.String" value="Ti&#xea;&#x300;n kha&#x301;ch &#x111;&#x1b0;a "/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtTienKH">
+        <Component class="BIA.View.Swing.MyTextField" name="txtTienKH">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -437,7 +437,7 @@
             <Property name="text" type="java.lang.String" value="Ti&#xea;&#x300;n tra&#x309; la&#x323;i"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtTientra">
+        <Component class="BIA.View.Swing.MyTextField" name="txtTientra">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -460,7 +460,7 @@
             <Property name="text" type="java.lang.String" value="Ma&#x303; Kha&#x301;ch Ha&#x300;ng"/>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtidKH">
+        <Component class="BIA.View.Swing.MyTextField" name="txtidKH">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="0"/>

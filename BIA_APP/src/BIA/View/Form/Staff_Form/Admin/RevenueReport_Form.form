@@ -109,7 +109,7 @@
         <Property name="rows" type="int" value="1"/>
       </Layout>
       <SubComponents>
-        <Component class="RTDRestaurant.View.Component.Admin_Component.Card" name="Crevenue">
+        <Component class="BIA.View.Component.Admin_Component.Card" name="Crevenue">
           <Properties>
             <Property name="color1" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a3" green="4e" red="65" type="rgb"/>
@@ -119,7 +119,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Component.Admin_Component.Card" name="Cexpenses">
+        <Component class="BIA.View.Component.Admin_Component.Card" name="Cexpenses">
           <Properties>
             <Property name="color1" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ca" green="de" red="6d" type="rgb"/>
@@ -129,7 +129,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="RTDRestaurant.View.Component.Admin_Component.Card" name="Cprofit">
+        <Component class="BIA.View.Component.Admin_Component.Card" name="Cprofit">
           <Properties>
             <Property name="color1" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="40" green="31" red="23" type="rgb"/>
@@ -181,7 +181,7 @@
         <Property name="text" type="java.lang.String" value="Bi&#xea;&#x309;u &#x110;&#xf4;&#x300; Doanh Thu"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.Chart.LineChart" name="lineChart">
+    <Component class="BIA.View.Swing.Chart.LineChart" name="lineChart">
     </Component>
     <Component class="javax.swing.JComboBox" name="filter">
       <Properties>

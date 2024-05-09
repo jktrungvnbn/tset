@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -57,11 +57,11 @@ public class MenuButton extends JButton {
     }
 
     private void init() {
-        setFont(new Font("sansserif",0,13));
+        setFont(new Font("sansserif", 0, 13));
         setContentAreaFilled(false);
         setForeground(new Color(255, 255, 255));
         setHorizontalAlignment(JButton.LEFT);
-        //Event Menu Pressed
+        // Event Menu Pressed
         addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent me) {
@@ -75,7 +75,7 @@ public class MenuButton extends JButton {
                 animator.start();
             }
         });
-        //Animation khi mousepress vào menu
+        // Animation khi mousepress vào menu
         TimingTarget target = new TimingTargetAdapter() {
             @Override
             public void timingEvent(float fraction) {
@@ -97,7 +97,8 @@ public class MenuButton extends JButton {
         if (pressedPoint != null) {
             g2.setColor(effectColor);
             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
-            g2.fillOval((int) (pressedPoint.x - animatSize / 2), (int) (pressedPoint.y - animatSize / 2), (int) animatSize, (int) animatSize);
+            g2.fillOval((int) (pressedPoint.x - animatSize / 2), (int) (pressedPoint.y - animatSize / 2),
+                    (int) animatSize, (int) animatSize);
         }
         g2.setComposite(AlphaComposite.SrcOver);
         super.paintComponent(grphcs);

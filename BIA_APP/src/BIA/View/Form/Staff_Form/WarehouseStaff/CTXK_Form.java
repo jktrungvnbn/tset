@@ -1,11 +1,11 @@
-package RTDRestaurant.View.Form.Staff_Form.WarehouseStaff;
+package BIA.View.Form.Staff_Form.WarehouseStaff;
 
-import RTDRestaurant.Controller.Service.ServiceStaff;
-import RTDRestaurant.Model.ModelCTXK;
-import RTDRestaurant.Model.ModelNguoiDung;
-import RTDRestaurant.Model.ModelPXK;
-import RTDRestaurant.View.Form.MainForm;
-import RTDRestaurant.View.Swing.CustomScrollBar.ScrollBarCustom;
+import BIA.Controller.Service.ServiceStaff;
+import BIA.Model.ModelCTXK;
+import BIA.Model.ModelNguoiDung;
+import BIA.Model.ModelPXK;
+import BIA.View.Form.MainForm;
+import BIA.View.Swing.CustomScrollBar.ScrollBarCustom;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
@@ -20,8 +20,8 @@ public class CTXK_Form extends javax.swing.JPanel {
     private ModelPXK pxk;
     DecimalFormat df;
 
-    public CTXK_Form(ModelNguoiDung user,ModelPXK pxk, MainForm main) {
-        this.user=user;
+    public CTXK_Form(ModelNguoiDung user, ModelPXK pxk, MainForm main) {
+        this.user = user;
         this.main = main;
         this.pxk = pxk;
         service = new ServiceStaff();
@@ -35,12 +35,11 @@ public class CTXK_Form extends javax.swing.JPanel {
         jScrollPane1.setVerticalScrollBar(new ScrollBarCustom());
         jScrollPane1.getViewport().setBackground(Color.WHITE);
         df = new DecimalFormat("##,###,###");
-        //Thêm data cho Menu
+        // Thêm data cho Menu
         initTable();
 
         lbDate.setText("Ngày xuất kho: " + pxk.getNgayXK());
         txtidPN.setText(pxk.getIdXK() + "");
-        
 
     }
 
@@ -48,8 +47,8 @@ public class CTXK_Form extends javax.swing.JPanel {
         try {
             list = service.getCTXK(pxk.getIdXK());
             for (ModelCTXK data : list) {
-                tableCTXK.addRow(new Object[]{data.getIdNL(), data.getTenNL(), data.getDvt(),
-                                data.getsL()});
+                tableCTXK.addRow(new Object[] { data.getIdNL(), data.getTenNL(), data.getDvt(),
+                        data.getsL() });
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -60,8 +59,8 @@ public class CTXK_Form extends javax.swing.JPanel {
         tableCTXK.removeAllRow();
         for (ModelCTXK data : list) {
             if ((data.getTenNL()).toLowerCase().contains(txt.toLowerCase())) {
-                tableCTXK.addRow(new Object[]{data.getIdNL(), data.getTenNL(), data.getDvt(),
-                                data.getsL()});
+                tableCTXK.addRow(new Object[] { data.getIdNL(), data.getTenNL(), data.getDvt(),
+                        data.getsL() });
             }
         }
         tableCTXK.repaint();
@@ -69,17 +68,18 @@ public class CTXK_Form extends javax.swing.JPanel {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbTitle = new javax.swing.JLabel();
-        txtSearch = new RTDRestaurant.View.Swing.MyTextField();
+        txtSearch = new BIA.View.Swing.MyTextField();
         lbidNK = new javax.swing.JLabel();
-        txtidPN = new RTDRestaurant.View.Swing.MyTextField();
+        txtidPN = new BIA.View.Swing.MyTextField();
         lbPNK = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableCTXK = new RTDRestaurant.View.Swing.Table();
+        tableCTXK = new BIA.View.Swing.Table();
         lbDate = new javax.swing.JLabel();
         cmdReturn = new javax.swing.JLabel();
 
@@ -116,19 +116,18 @@ public class CTXK_Form extends javax.swing.JPanel {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         tableCTXK.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
-                "Mã NL", "Tên NL", "Đơn vị tính", "Số lượng"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                },
+                new String[] {
+                        "Mã NL", "Tên NL", "Đơn vị tính", "Số lượng"
+                }) {
+            boolean[] canEdit = new boolean[] {
+                    false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         jScrollPane1.setViewportView(tableCTXK);
@@ -154,63 +153,81 @@ public class CTXK_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE)
-                    .addComponent(jSeparator2)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(cmdReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbidNK, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(txtidPN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lbPNK))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 788,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jSeparator2)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                layout.createSequentialGroup()
+                                                        .addGap(0, 0, Short.MAX_VALUE)
+                                                        .addComponent(cmdReturn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(lbidNK,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 191,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(60, 60, 60)
+                                                                .addComponent(txtidPN,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(lbPNK))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(lbTitle)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 260,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap()));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cmdReturn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbidNK, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtidPN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbPNK, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(cmdReturn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lbidNK, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtidPN, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbPNK, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtSearchActionPerformed
         searchTable(txtSearch.getText().trim());
-    }//GEN-LAST:event_txtSearchActionPerformed
+    }// GEN-LAST:event_txtSearchActionPerformed
 
-    private void cmdReturnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdReturnMouseClicked
+    private void cmdReturnMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cmdReturnMouseClicked
         main.showForm(new Export_Form(user, main));
-    }//GEN-LAST:event_cmdReturnMouseClicked
-
+    }// GEN-LAST:event_cmdReturnMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cmdReturn;
@@ -220,8 +237,8 @@ public class CTXK_Form extends javax.swing.JPanel {
     private javax.swing.JLabel lbPNK;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JLabel lbidNK;
-    private RTDRestaurant.View.Swing.Table tableCTXK;
-    private RTDRestaurant.View.Swing.MyTextField txtSearch;
-    private RTDRestaurant.View.Swing.MyTextField txtidPN;
+    private BIA.View.Swing.Table tableCTXK;
+    private BIA.View.Swing.MyTextField txtSearch;
+    private BIA.View.Swing.MyTextField txtidPN;
     // End of variables declaration//GEN-END:variables
 }

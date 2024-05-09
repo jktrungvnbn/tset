@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Dialog;
+package BIA.View.Dialog;
 
 import java.awt.Color;
 import java.awt.Frame;
@@ -15,7 +15,6 @@ public class MS_PaymentSuccess extends javax.swing.JDialog {
     private final Animator animator;
     private boolean show = true;
     private Frame frame;
-    
 
     public MS_PaymentSuccess(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -45,19 +44,21 @@ public class MS_PaymentSuccess extends javax.swing.JDialog {
         animator.setResolution(0);
         animator.setAcceleration(0.5f);
     }
-    
-    //Thông báo xuất file excel Thành Công
+
+    // Thông báo xuất file excel Thành Công
     public void ConfirmPaymentSuccess(int idHD) {
-        setLocationRelativeTo(frame); 
-        lbMessage.setText("Hóa Đơn - "+idHD+" hoàn tất xác nhận thanh toán.");
+        setLocationRelativeTo(frame);
+        lbMessage.setText("Hóa Đơn - " + idHD + " hoàn tất xác nhận thanh toán.");
         animator.start();
         setVisible(true);
     }
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRound1 = new RTDRestaurant.View.Swing.PanelRound();
+        panelRound1 = new BIA.View.Swing.PanelRound();
         lbTitle = new javax.swing.JLabel();
         lbIcon = new javax.swing.JLabel();
         cmdClose = new javax.swing.JLabel();
@@ -93,54 +94,60 @@ public class MS_PaymentSuccess extends javax.swing.JDialog {
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelRound1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(panelRound1Layout.createSequentialGroup()
-                            .addGap(247, 247, 247)
-                            .addComponent(lbIcon)
-                            .addGap(193, 193, 193)
-                            .addComponent(cmdClose))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                                .addGroup(panelRound1Layout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 522,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(panelRound1Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addGroup(panelRound1Layout.createSequentialGroup()
+                                                        .addContainerGap()
+                                                        .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGroup(panelRound1Layout.createSequentialGroup()
+                                                        .addGap(247, 247, 247)
+                                                        .addComponent(lbIcon)
+                                                        .addGap(193, 193, 193)
+                                                        .addComponent(cmdClose))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cmdClose)
-                    .addComponent(lbIcon))
-                .addGap(20, 20, 20)
-                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(lbMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-        );
+                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(
+                                        panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(cmdClose)
+                                                .addComponent(lbIcon))
+                                .addGap(20, 20, 20)
+                                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23,
+                                        Short.MAX_VALUE)
+                                .addComponent(lbMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmdCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdCloseMouseClicked
+    private void cmdCloseMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cmdCloseMouseClicked
         closeMenu();
-    }//GEN-LAST:event_cmdCloseMouseClicked
+    }// GEN-LAST:event_cmdCloseMouseClicked
 
     private void closeMenu() {
         if (animator.isRunning()) {
@@ -165,6 +172,6 @@ public class MS_PaymentSuccess extends javax.swing.JDialog {
     private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbMessage;
     private javax.swing.JLabel lbTitle;
-    private RTDRestaurant.View.Swing.PanelRound panelRound1;
+    private BIA.View.Swing.PanelRound panelRound1;
     // End of variables declaration//GEN-END:variables
 }

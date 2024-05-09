@@ -1,5 +1,5 @@
 
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
 import java.awt.Color;
 import java.awt.FontMetrics;
@@ -68,7 +68,8 @@ public class MyTextField extends JTextField {
         super.paint(g);
         if (getText().length() == 0) {
             int h = getHeight();
-            ((Graphics2D) g).setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+            ((Graphics2D) g).setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
+                    RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
             Insets ins = getInsets();
             FontMetrics fm = g.getFontMetrics();
             g.setColor(Color.decode("#536976"));
@@ -93,13 +94,13 @@ public class MyTextField extends JTextField {
     private void initBorder() {
         int left = 15;
         int right = 15;
-        //  5 is default
+        // 5 is default
         if (prefixIcon != null) {
-            //  prefix is left
+            // prefix is left
             left = prefixIcon.getIconWidth() + 15;
         }
         if (suffixIcon != null) {
-            //  suffix is right
+            // suffix is right
             right = suffixIcon.getIconWidth() + 15;
         }
         setBorder(javax.swing.BorderFactory.createEmptyBorder(10, left, 10, right));

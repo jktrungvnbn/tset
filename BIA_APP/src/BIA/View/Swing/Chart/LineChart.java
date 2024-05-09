@@ -1,10 +1,10 @@
-package RTDRestaurant.View.Swing.Chart;
+package BIA.View.Swing.Chart;
 
-import RTDRestaurant.Model.ModelChart;
-import RTDRestaurant.Model.ModelLegend;
-import RTDRestaurant.View.Swing.Chart.BlankChart.BlankPlotChart;
-import RTDRestaurant.View.Swing.Chart.BlankChart.BlankPlotChatRender;
-import RTDRestaurant.View.Swing.Chart.BlankChart.SeriesSize;
+import BIA.Model.ModelChart;
+import BIA.Model.ModelLegend;
+import BIA.View.Swing.Chart.BlankChart.BlankPlotChart;
+import BIA.View.Swing.Chart.BlankChart.BlankPlotChatRender;
+import BIA.View.Swing.Chart.BlankChart.SeriesSize;
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -66,13 +66,15 @@ public class LineChart extends javax.swing.JPanel {
             }
 
             @Override
-            public void renderSeries(BlankPlotChart chart, Graphics2D g2, SeriesSize size, int index, List<Path2D.Double> gra) {
+            public void renderSeries(BlankPlotChart chart, Graphics2D g2, SeriesSize size, int index,
+                    List<Path2D.Double> gra) {
                 double totalSeriesWidth = (seriesSize * legends.size()) + (seriesSpace * (legends.size() - 1));
                 double x = (size.getWidth() - totalSeriesWidth) / 2;
                 g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
                 int ss = seriesSize / 2;
                 for (int i = 0; i < legends.size(); i++) {
-                    double seriesValues = chart.getSeriesValuesOf(model.get(index).getValues()[i], size.getHeight()) * animate;
+                    double seriesValues = chart.getSeriesValuesOf(model.get(index).getValues()[i], size.getHeight())
+                            * animate;
                     if (index == 0) {
                         gra.get(i).moveTo(size.getX() + x + ss, size.getY() + size.getHeight() - seriesValues);
                     } else {
@@ -86,7 +88,9 @@ public class LineChart extends javax.swing.JPanel {
                     int space = 3;
                     int spaceTop = 0;
                     g2.setColor(new Color(30, 30, 30));
-                    g2.fillRoundRect(labelLocation.x - s.width / 2 - 3, labelLocation.y - s.height - space * 2 - spaceTop, s.width + space * 2, s.height + space * 2, 10, 10);
+                    g2.fillRoundRect(labelLocation.x - s.width / 2 - 3,
+                            labelLocation.y - s.height - space * 2 - spaceTop, s.width + space * 2,
+                            s.height + space * 2, 10, 10);
                     g2.setColor(new Color(200, 200, 200));
                     g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
                     g2.drawString(showLabel, labelLocation.x - s.width / 2, labelLocation.y - spaceTop - space * 2);
@@ -99,25 +103,35 @@ public class LineChart extends javax.swing.JPanel {
                 g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.7f));
                 g2.setStroke(new BasicStroke(4f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));
                 for (int i = 0; i < gra.size(); i++) {
-                    g2.setPaint(new GradientPaint(0, 0, legends.get(i).getColor(), getWidth(), 0, legends.get(i).getColorLight()));
+                    g2.setPaint(new GradientPaint(0, 0, legends.get(i).getColor(), getWidth(), 0,
+                            legends.get(i).getColorLight()));
                     g2.draw(gra.get(i));
                 }
             }
 
             @Override
-            public boolean mouseMoving(BlankPlotChart chart, MouseEvent evt, Graphics2D g2, SeriesSize size, int index) {
+            public boolean mouseMoving(BlankPlotChart chart, MouseEvent evt, Graphics2D g2, SeriesSize size,
+                    int index) {
                 double totalSeriesWidth = (seriesSize * legends.size()) + (seriesSpace * (legends.size() - 1));
                 double x = (size.getWidth() - totalSeriesWidth) / 2;
                 for (int i = 0; i < legends.size(); i++) {
-                    double seriesValues = chart.getSeriesValuesOf(model.get(index).getValues()[i], size.getHeight()) * animate;
+                    double seriesValues = chart.getSeriesValuesOf(model.get(index).getValues()[i], size.getHeight())
+                            * animate;
                     int s = seriesSize / 2;
                     int sy = seriesSize / 3;
-                    int px[] = {(int) (size.getX() + x), (int) (size.getX() + x + s), (int) (size.getX() + x + seriesSize), (int) (size.getX() + x + seriesSize), (int) (size.getX() + x + s), (int) (size.getX() + x)};
-                    int py[] = {(int) (size.getY() + size.getHeight() - seriesValues), (int) (size.getY() + size.getHeight() - seriesValues - sy), (int) (size.getY() + size.getHeight() - seriesValues), (int) (size.getY() + size.getHeight()), (int) (size.getY() + size.getHeight() + sy), (int) (size.getY() + size.getHeight())};
+                    int px[] = { (int) (size.getX() + x), (int) (size.getX() + x + s),
+                            (int) (size.getX() + x + seriesSize), (int) (size.getX() + x + seriesSize),
+                            (int) (size.getX() + x + s), (int) (size.getX() + x) };
+                    int py[] = { (int) (size.getY() + size.getHeight() - seriesValues),
+                            (int) (size.getY() + size.getHeight() - seriesValues - sy),
+                            (int) (size.getY() + size.getHeight() - seriesValues),
+                            (int) (size.getY() + size.getHeight()), (int) (size.getY() + size.getHeight() + sy),
+                            (int) (size.getY() + size.getHeight()) };
                     if (new Polygon(px, py, px.length).contains(evt.getPoint())) {
                         double data = model.get(index).getValues()[i];
                         showLabel = df.format(data);
-                        labelLocation.setLocation((int) (size.getX() + x + s), (int) (size.getY() + size.getHeight() - seriesValues - sy));
+                        labelLocation.setLocation((int) (size.getX() + x + s),
+                                (int) (size.getY() + size.getHeight() - seriesValues - sy));
                         chart.repaint();
                         return true;
                     }
@@ -167,11 +181,12 @@ public class LineChart extends javax.swing.JPanel {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         panelLegend = new javax.swing.JPanel();
-        blankPlotChart = new RTDRestaurant.View.Swing.Chart.BlankChart.BlankPlotChart();
+        blankPlotChart = new BIA.View.Swing.Chart.BlankChart.BlankPlotChart();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -184,27 +199,29 @@ public class LineChart extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelLegend, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
-                    .addComponent(blankPlotChart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(panelLegend, javax.swing.GroupLayout.DEFAULT_SIZE, 573,
+                                                Short.MAX_VALUE)
+                                        .addComponent(blankPlotChart, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap()));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(blankPlotChart, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(panelLegend, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(blankPlotChart, javax.swing.GroupLayout.PREFERRED_SIZE, 336,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(panelLegend, javax.swing.GroupLayout.PREFERRED_SIZE, 28,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()));
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private RTDRestaurant.View.Swing.Chart.BlankChart.BlankPlotChart blankPlotChart;
+    private BIA.View.Swing.Chart.BlankChart.BlankPlotChart blankPlotChart;
     private javax.swing.JPanel panelLegend;
     // End of variables declaration//GEN-END:variables
 }

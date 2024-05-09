@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing.Chart.BlankChart;
+package BIA.View.Swing.Chart.BlankChart;
 
 public class SeriesSize {
 

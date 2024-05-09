@@ -1,5 +1,5 @@
 
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -8,7 +8,7 @@ import java.awt.RenderingHints;
 import javax.swing.JPanel;
 
 //Custom bo góc JPanel 
-public class PanelRound extends JPanel{
+public class PanelRound extends JPanel {
 
     public PanelRound() {
         setOpaque(false);

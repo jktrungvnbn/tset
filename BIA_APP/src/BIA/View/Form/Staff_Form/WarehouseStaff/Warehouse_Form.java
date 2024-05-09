@@ -1,10 +1,10 @@
 
-package RTDRestaurant.View.Form.Staff_Form.WarehouseStaff;
+package BIA.View.Form.Staff_Form.WarehouseStaff;
 
-import RTDRestaurant.Controller.Service.ServiceStaff;
-import RTDRestaurant.Model.ModelKho;
-import RTDRestaurant.View.Form.MainForm;
-import RTDRestaurant.View.Swing.CustomScrollBar.ScrollBarCustom;
+import BIA.Controller.Service.ServiceStaff;
+import BIA.Model.ModelKho;
+import BIA.View.Form.MainForm;
+import BIA.View.Swing.CustomScrollBar.ScrollBarCustom;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -13,74 +13,78 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class Warehouse_Form extends javax.swing.JPanel {
 
     private ServiceStaff service;
     private ArrayList<ModelKho> list;
     private final MainForm main;
-    
+
     public Warehouse_Form(MainForm main) {
-        this.main=main;
-        service=new ServiceStaff();
+        this.main = main;
+        service = new ServiceStaff();
         initComponents();
         init();
     }
 
-    public void init(){
+    public void init() {
         txtSearch.setHint("Tìm kiếm Nguyên Liệu . . .");
         jScrollPane1.setVerticalScrollBar(new ScrollBarCustom());
         jScrollPane1.getViewport().setBackground(Color.WHITE);
-       
-        //Thêm data cho Menu
+
+        // Thêm data cho Menu
         initTable();
         getSLTonkho();
         setCurrentDate();
     }
-    public void getSLTonkho(){
+
+    public void getSLTonkho() {
         try {
-            txtTong.setText(service.getSLNL_TonKho()+"");
+            txtTong.setText(service.getSLNL_TonKho() + "");
         } catch (SQLException ex) {
             Logger.getLogger(Warehouse_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     public void setCurrentDate() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
-        lbDate.setText("Ngày hiện tại: "+simpleDateFormat.format(new Date()));
+        lbDate.setText("Ngày hiện tại: " + simpleDateFormat.format(new Date()));
     }
-    public void initTable(){
+
+    public void initTable() {
         try {
             list = service.MenuKhoNL();
-            for(ModelKho data:list){  
-                tableNL.addRow(new Object[]{data.getIdNL(),data.getTenNL(),data.getDvt(),data.getSlTon()});
+            for (ModelKho data : list) {
+                tableNL.addRow(new Object[] { data.getIdNL(), data.getTenNL(), data.getDvt(), data.getSlTon() });
             }
-        }catch(SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
-    public void searchTable(String txt){
+
+    public void searchTable(String txt) {
         tableNL.removeAllRow();
-        for(ModelKho data:list){
-            if((data.getTenNL()).toLowerCase().contains(txt.toLowerCase())){
-                tableNL.addRow(new Object[]{data.getIdNL(),data.getTenNL(),data.getDvt(),data.getSlTon()});
+        for (ModelKho data : list) {
+            if ((data.getTenNL()).toLowerCase().contains(txt.toLowerCase())) {
+                tableNL.addRow(new Object[] { data.getIdNL(), data.getTenNL(), data.getDvt(), data.getSlTon() });
             }
         }
         tableNL.repaint();
         tableNL.revalidate();
     }
-    
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbTitle = new javax.swing.JLabel();
-        txtSearch = new RTDRestaurant.View.Swing.MyTextField();
+        txtSearch = new BIA.View.Swing.MyTextField();
         lbTong = new javax.swing.JLabel();
-        txtTong = new RTDRestaurant.View.Swing.MyTextField();
+        txtTong = new BIA.View.Swing.MyTextField();
         lbNLKho = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableNL = new RTDRestaurant.View.Swing.Table();
+        tableNL = new BIA.View.Swing.Table();
         lbDate = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(247, 247, 247));
@@ -121,19 +125,18 @@ public class Warehouse_Form extends javax.swing.JPanel {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         tableNL.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
-                "Mã NL", "Tên nguyên liệu", "Đơn vị tính", "Số lượng tồn"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                },
+                new String[] {
+                        "Mã NL", "Tên nguyên liệu", "Đơn vị tính", "Số lượng tồn"
+                }) {
+            boolean[] canEdit = new boolean[] {
+                    false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         jScrollPane1.setViewportView(tableNL);
@@ -155,60 +158,72 @@ public class Warehouse_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
-                    .addComponent(jSeparator2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbTong)
-                                .addGap(50, 50, 50)
-                                .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lbNLKho)
-                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jSeparator2)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(lbTong)
+                                                                .addGap(50, 50, 50)
+                                                                .addComponent(txtTong,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(lbNLKho)
+                                                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(lbTitle)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 250,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap()));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbDate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbNLKho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lbDate))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbNLKho, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
-       
-        searchTable(txtSearch.getText().trim());
-    }//GEN-LAST:event_txtSearchActionPerformed
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtSearchActionPerformed
 
-    private void txtSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtSearchMouseEntered
-        
         searchTable(txtSearch.getText().trim());
-    }//GEN-LAST:event_txtSearchMouseEntered
+    }// GEN-LAST:event_txtSearchActionPerformed
 
+    private void txtSearchMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_txtSearchMouseEntered
+
+        searchTable(txtSearch.getText().trim());
+    }// GEN-LAST:event_txtSearchMouseEntered
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
@@ -217,8 +232,8 @@ public class Warehouse_Form extends javax.swing.JPanel {
     private javax.swing.JLabel lbNLKho;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JLabel lbTong;
-    private RTDRestaurant.View.Swing.Table tableNL;
-    private RTDRestaurant.View.Swing.MyTextField txtSearch;
-    private RTDRestaurant.View.Swing.MyTextField txtTong;
+    private BIA.View.Swing.Table tableNL;
+    private BIA.View.Swing.MyTextField txtSearch;
+    private BIA.View.Swing.MyTextField txtTong;
     // End of variables declaration//GEN-END:variables
 }

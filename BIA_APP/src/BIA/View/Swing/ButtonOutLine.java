@@ -1,5 +1,5 @@
 
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
 import java.awt.Color;
 import java.awt.Cursor;

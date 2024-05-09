@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing.Chart;
+package BIA.View.Swing.Chart;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;

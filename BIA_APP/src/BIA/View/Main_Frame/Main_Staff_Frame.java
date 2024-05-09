@@ -1,13 +1,13 @@
-package RTDRestaurant.View.Main_Frame;
+package BIA.View.Main_Frame;
 
-import RTDRestaurant.Controller.Connection.DatabaseConnection;
-import RTDRestaurant.Controller.Event.EventMenuSelected;
-import RTDRestaurant.Model.ModelNguoiDung;
-import RTDRestaurant.View.Component.Staff_Component.MenuS;
-import RTDRestaurant.View.Form.MainForm;
-import RTDRestaurant.View.Form.Staff_Form.AccountS_Form;
-import RTDRestaurant.View.Form.Staff_Form.CusInformation_Form;
-import RTDRestaurant.View.Form.Staff_Form.Staff.TableMenuS_Form;
+import BIA.Controller.Connection.DatabaseConnection;
+import BIA.Controller.Event.EventMenuSelected;
+import BIA.Model.ModelNguoiDung;
+import BIA.View.Component.Staff_Component.MenuS;
+import BIA.View.Form.MainForm;
+import BIA.View.Form.Staff_Form.AccountS_Form;
+import BIA.View.Form.Staff_Form.CusInformation_Form;
+import BIA.View.Form.Staff_Form.Staff.TableMenuS_Form;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 import java.sql.SQLException;
@@ -46,12 +46,12 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
             public void menuSelected(int menuIndex, int subMenuIndex) {
                 switch (menuIndex) {
                     case 0 -> {
-                        if(subMenuIndex==0){
-                            main.showForm(new TableMenuS_Form("Tang 1",user,main));
-                        }else if(subMenuIndex==1){
-                            main.showForm(new TableMenuS_Form("Tang 2",user,main));
-                        }else if(subMenuIndex==2){
-                            main.showForm(new TableMenuS_Form("Tang 3",user,main));
+                        if (subMenuIndex == 0) {
+                            main.showForm(new TableMenuS_Form("Tang 1", user, main));
+                        } else if (subMenuIndex == 1) {
+                            main.showForm(new TableMenuS_Form("Tang 2", user, main));
+                        } else if (subMenuIndex == 2) {
+                            main.showForm(new TableMenuS_Form("Tang 3", user, main));
                         }
                     }
                     case 1 -> {
@@ -70,14 +70,15 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
             }
         });
         menu.initMenuItem();
-        bg.add(menu, "w 265!, spany 2"); //Span Y 2cell
+        bg.add(menu, "w 265!, spany 2"); // Span Y 2cell
         bg.add(main, "w 100%, h 100%");
-        //Form mặc định lúc đăng nhập
-        main.showForm(new TableMenuS_Form("Tang 1",user,main));
+        // Form mặc định lúc đăng nhập
+        main.showForm(new TableMenuS_Form("Tang 1", user, main));
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         bg = new javax.swing.JLayeredPane();
@@ -90,26 +91,22 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1321, Short.MAX_VALUE)
-        );
+                bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 1321, Short.MAX_VALUE));
         bgLayout.setVerticalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 724, Short.MAX_VALUE)
-        );
+                bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 724, Short.MAX_VALUE));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 1321, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 1321, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
-                .addGap(1, 1, 1))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
+                                .addGap(1, 1, 1)));
 
         pack();
         setLocationRelativeTo(null);
@@ -117,9 +114,13 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -129,18 +130,22 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         try {
@@ -157,9 +162,13 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
 
     public static void main(ModelNguoiDung user) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -169,18 +178,22 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_Staff_Frame.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         try {

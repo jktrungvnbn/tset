@@ -115,7 +115,7 @@
         <Property name="iconTextGap" type="int" value="10"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtSearch">
+    <Component class="BIA.View.Swing.MyTextField" name="txtSearch">
       <Properties>
         <Property name="prefixIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/loupe (1).png"/>
@@ -136,7 +136,7 @@
         <Property name="text" type="java.lang.String" value="Doanh thu Ho&#x301;a &#x110;&#x1a1;n trong nga&#x300;y"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtprofit">
+    <Component class="BIA.View.Swing.MyTextField" name="txtprofit">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
@@ -174,7 +174,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="RTDRestaurant.View.Swing.Table" name="tableHD">
+        <Component class="BIA.View.Swing.Table" name="tableHD">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="7" rowCount="0">
@@ -293,7 +293,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.Button" name="cmdCTHD">
+    <Component class="BIA.View.Swing.Button" name="cmdCTHD">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="7b" green="5b" red="6c" type="rgb"/>
@@ -314,7 +314,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdCTHDActionPerformed"/>
       </Events>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.Button" name="cmdExcel">
+    <Component class="BIA.View.Swing.Button" name="cmdExcel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="7b" green="5b" red="6c" type="rgb"/>

@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -78,7 +78,8 @@ public class Button extends JButton {
         if (pressedPoint != null) {
             g2.setColor(effectColor);
             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));
-            g2.fillOval((int) (pressedPoint.x - animatSize / 2), (int) (pressedPoint.y - animatSize / 2), (int) animatSize, (int) animatSize);
+            g2.fillOval((int) (pressedPoint.x - animatSize / 2), (int) (pressedPoint.y - animatSize / 2),
+                    (int) animatSize, (int) animatSize);
         }
         g2.dispose();
         grphcs.drawImage(img, 0, 0, null);

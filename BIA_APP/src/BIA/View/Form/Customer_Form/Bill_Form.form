@@ -93,7 +93,7 @@
         <Property name="iconTextGap" type="int" value="10"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtSearch">
+    <Component class="BIA.View.Swing.MyTextField" name="txtSearch">
       <Properties>
         <Property name="prefixIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/loupe (1).png"/>
@@ -160,7 +160,7 @@
         <Property name="text" type="java.lang.String" value="Doanh s&#xf4;&#x301; cu&#x309;a ba&#x323;n"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtPoint">
+    <Component class="BIA.View.Swing.MyTextField" name="txtPoint">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
@@ -198,7 +198,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="RTDRestaurant.View.Swing.Table" name="tableHD">
+        <Component class="BIA.View.Swing.Table" name="tableHD">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="6" rowCount="0">

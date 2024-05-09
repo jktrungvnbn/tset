@@ -134,7 +134,7 @@
         <Property name="iconTextGap" type="int" value="10"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtSearch">
+    <Component class="BIA.View.Swing.MyTextField" name="txtSearch">
       <Properties>
         <Property name="prefixIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/loupe (1).png"/>
@@ -202,7 +202,7 @@
         <Property name="text" type="java.lang.String" value="&#x110;i&#xea;&#x309;m ti&#x301;ch lu&#x303;y cu&#x309;a ba&#x323;n"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtPoint">
+    <Component class="BIA.View.Swing.MyTextField" name="txtPoint">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>

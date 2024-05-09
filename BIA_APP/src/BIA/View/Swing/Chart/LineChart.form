@@ -53,7 +53,7 @@
         <Property name="verticalGap" type="int" value="0"/>
       </Layout>
     </Container>
-    <Container class="RTDRestaurant.View.Swing.Chart.BlankChart.BlankPlotChart" name="blankPlotChart">
+    <Container class="BIA.View.Swing.Chart.BlankChart.BlankPlotChart" name="blankPlotChart">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="59" green="59" red="59" type="rgb"/>

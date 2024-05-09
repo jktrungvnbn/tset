@@ -53,7 +53,7 @@
         <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.Chart.LabelColor" name="lbColor">
+    <Component class="BIA.View.Swing.Chart.LabelColor" name="lbColor">
       <Properties>
         <Property name="text" type="java.lang.String" value="labelColor1"/>
       </Properties>

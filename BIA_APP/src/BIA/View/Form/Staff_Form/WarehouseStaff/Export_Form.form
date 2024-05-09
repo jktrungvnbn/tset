@@ -100,7 +100,7 @@
         <Property name="iconTextGap" type="int" value="10"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtSearch">
+    <Component class="BIA.View.Swing.MyTextField" name="txtSearch">
       <Properties>
         <Property name="prefixIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/loupe (1).png"/>
@@ -122,7 +122,7 @@
         <Property name="text" type="java.lang.String" value="S&#xf4;&#x301; Phi&#xea;&#x301;u xu&#xe2;&#x301;t kho h&#xf4;m nay"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtslPXK">
+    <Component class="BIA.View.Swing.MyTextField" name="txtslPXK">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
@@ -160,7 +160,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="RTDRestaurant.View.Swing.Table" name="tablePXK">
+        <Component class="BIA.View.Swing.Table" name="tablePXK">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="3" rowCount="0">
@@ -195,7 +195,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="RTDRestaurant.View.Swing.Button" name="cmdAdd">
+    <Component class="BIA.View.Swing.Button" name="cmdAdd">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="7b" green="5b" red="6c" type="rgb"/>
@@ -210,7 +210,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.Button" name="cmdCT">
+    <Component class="BIA.View.Swing.Button" name="cmdCT">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="7b" green="5b" red="6c" type="rgb"/>

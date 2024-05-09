@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -13,10 +13,11 @@ public class Table extends JTable {
         setShowHorizontalLines(true);
         setGridColor(new Color(230, 230, 230));
         setRowHeight(40);
-        //getTableHeader().setResizingAllowed(false);
+        // getTableHeader().setResizingAllowed(false);
         getTableHeader().setDefaultRenderer(new DefaultTableCellRenderer() {
             @Override
-            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
+                    boolean hasFocus, int row, int column) {
                 TableHeader header = new TableHeader(value + "");
 
                 return header;
@@ -24,7 +25,8 @@ public class Table extends JTable {
         });
         setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
             @Override
-            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
+                    boolean hasFocus, int row, int column) {
                 Component com = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
                 com.setBackground(Color.WHITE);
                 setBorder(noFocusBorder);
@@ -51,11 +53,12 @@ public class Table extends JTable {
         dm.getDataVector().removeAllElements();
         revalidate();
     }
-    public int getFirstCol_RowSelected(int row){
-        row=Math.max(row, 0);
+
+    public int getFirstCol_RowSelected(int row) {
+        row = Math.max(row, 0);
         int id;
         DefaultTableModel dm = (DefaultTableModel) getModel();
-        id=(Integer)dm.getValueAt(row, 0);
+        id = (Integer) dm.getValueAt(row, 0);
         return id;
     }
 }

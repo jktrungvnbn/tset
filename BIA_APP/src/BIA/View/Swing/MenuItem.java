@@ -1,8 +1,8 @@
-package RTDRestaurant.View.Swing;
+package BIA.View.Swing;
 
-import RTDRestaurant.Controller.Event.EventMenu;
-import RTDRestaurant.Controller.Event.EventMenuSelected;
-import RTDRestaurant.Model.ModelMenu;
+import BIA.Controller.Event.EventMenu;
+import BIA.Controller.Event.EventMenuSelected;
+import BIA.Model.ModelMenu;
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -49,7 +49,8 @@ public class MenuItem extends javax.swing.JPanel {
     private int index;
 
     /*
-        Khởi tạo MenuItem với cái tham số ModelMenu, event mousePress, event chọn Menu và index của Menu đó 
+     * Khởi tạo MenuItem với cái tham số ModelMenu, event mousePress, event
+     * chọn Menu và index của Menu đó
      */
     public MenuItem(ModelMenu menu, EventMenu event, EventMenuSelected eventSelected, int index) {
         initComponents();
@@ -58,26 +59,26 @@ public class MenuItem extends javax.swing.JPanel {
         this.index = index;
         setOpaque(false);
         setLayout(new MigLayout("wrap, fillx, insets 0", "[fill]", "[fill, 40!]0[fill, 35!]"));
-        //Menu cha
+        // Menu cha
         MenuButton firstItem = new MenuButton(menu.getIcon(), "       " + menu.getMenuName());
-        firstItem.addActionListener(new ActionListener(){
+        firstItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               if(menu.getSubMenu().length>0){
-                   if(event.menuPress(MenuItem.this, !open)){
-                       open=!open;
-                   }
-               }
-               eventSelected.menuSelected(index,-1);
+                if (menu.getSubMenu().length > 0) {
+                    if (event.menuPress(MenuItem.this, !open)) {
+                        open = !open;
+                    }
+                }
+                eventSelected.menuSelected(index, -1);
             }
         });
         add(firstItem);
-        //Add Menu con 
+        // Add Menu con
         int subMenuIndex = -1;
         for (String st : menu.getSubMenu()) {
             MenuButton item = new MenuButton(st);
             item.setIndex(++subMenuIndex);
-            //Add Event khi được chọn cho subMenu
+            // Add Event khi được chọn cho subMenu
             item.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -90,20 +91,20 @@ public class MenuItem extends javax.swing.JPanel {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 400, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 300, Short.MAX_VALUE));
     }// </editor-fold>//GEN-END:initComponents
+
     @Override
     public void paintComponent(Graphics g) {
         int width = getWidth();

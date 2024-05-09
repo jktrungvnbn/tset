@@ -139,7 +139,7 @@
         <Property name="iconTextGap" type="int" value="10"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtSearch">
+    <Component class="BIA.View.Swing.MyTextField" name="txtSearch">
       <Properties>
         <Property name="prefixIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/loupe (1).png"/>
@@ -171,7 +171,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="RTDRestaurant.View.Swing.Table" name="tableCTNK">
+        <Component class="BIA.View.Swing.Table" name="tableCTNK">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="0">
@@ -249,7 +249,7 @@
         <Property name="text" type="java.lang.String" value="Ma&#x303; Xu&#xe2;&#x301;t Kho"/>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtmaXK">
+    <Component class="BIA.View.Swing.MyTextField" name="txtmaXK">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -264,7 +264,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.MyTextField" name="txtmaNV">
+    <Component class="BIA.View.Swing.MyTextField" name="txtmaNV">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -325,7 +325,7 @@
         </Property>
       </Properties>
     </Component>
-    <Container class="RTDRestaurant.View.Swing.ImageAvatar" name="pic">
+    <Container class="BIA.View.Swing.ImageAvatar" name="pic">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/invoice1.jpg"/>
@@ -336,7 +336,7 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
     </Container>
-    <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdOK">
+    <Component class="BIA.View.Swing.ButtonOutLine" name="cmdOK">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="8e" green="99" red="11" type="rgb"/>
@@ -354,7 +354,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdOKActionPerformed"/>
       </Events>
     </Component>
-    <Component class="RTDRestaurant.View.Swing.ButtonOutLine" name="cmdCancel">
+    <Component class="BIA.View.Swing.ButtonOutLine" name="cmdCancel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3a" green="21" red="ed" type="rgb"/>

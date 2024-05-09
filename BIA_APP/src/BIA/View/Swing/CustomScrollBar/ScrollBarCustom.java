@@ -1,4 +1,4 @@
-package RTDRestaurant.View.Swing.CustomScrollBar;
+package BIA.View.Swing.CustomScrollBar;
 
 import java.awt.Color;
 import java.awt.Dimension;
