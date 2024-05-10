@@ -32,9 +32,9 @@ public class ServiceStaff {
     public ModelNhanVien getStaff(int userID) throws SQLException {
         ModelNhanVien data = null;
         String sql = "SELECT ID_NV, TenNV, to_char(NgayVL, 'dd-mm-yyyy') AS Ngay, SDT, Chucvu, ID_NQL FROM NhanVien WHERE ID_ND=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, userID);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1, userID);
+        ResultSet r = ps.executeQuery();
         while (r.next()) {
             int id_NV = r.getInt("ID_NV");
             String tenNV = r.getString("TenNV");
@@ -45,24 +45,24 @@ public class ServiceStaff {
             data = new ModelNhanVien(id_NV, tenNV, ngayVL, sdt, chucvu, id_NQL);
         }
         r.close();
-        p.close();
+        ps.close();
         return data;
     }
     // Đổi tên Khách hàng 
     public void reNameStaff(ModelNhanVien data) throws SQLException {
         String sql = "UPDATE NhanVien SET TenNV=? WHERE ID_NV=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setString(1, data.getTenNV());
-        p.setInt(2, data.getId_NV());
-        p.execute();
-        p.close();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, data.getTenNV());
+        ps.setInt(2, data.getId_NV());
+        ps.execute();
+        ps.close();
     }
     //Lấy toàn bộ danh sách nguyên liệu
     public ArrayList<ModelNguyenLieu> MenuNL() throws SQLException {
         ArrayList<ModelNguyenLieu> list = new ArrayList<>();
         String sql = "SELECT ID_NL,TenNL,Dongia,Donvitinh FROM NguyenLieu ORDER BY ID_NL";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r = ps.executeQuery();
         while (r.next()) {
             int id = r.getInt(1);  //Mã nguyên liệu
             String tenNL = r.getString(2); //Tên nguyên liệu
@@ -72,7 +72,7 @@ public class ServiceStaff {
             list.add(data);
         }
         r.close();
-        p.close();
+        ps.close();
         return list;
     }
 
@@ -80,9 +80,9 @@ public class ServiceStaff {
     public ModelNguyenLieu getNLbyID(int idNL) throws SQLException {
         ModelNguyenLieu data = null;
         String sql = "SELECT ID_NL,TenNL,Dongia,Donvitinh FROM NguyenLieu WHERE ID_NL=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, idNL);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1, idNL);
+        ResultSet r = ps.executeQuery();
         while (r.next()) {
             int id = r.getInt(1);  //Mã nguyên liệu
             String tenNL = r.getString(2); //Tên nguyên liệu
@@ -91,7 +91,7 @@ public class ServiceStaff {
             data = new ModelNguyenLieu(id, tenNL, donGia, dvt);
         }
         r.close();
-        p.close();
+        ps.close();
         return data;
     }
 
@@ -99,61 +99,61 @@ public class ServiceStaff {
     public int getNextID_NL() throws SQLException {
         int nextID = 0;
         String sql = "SELECT MAX(ID_NL) as ID FROM NguyenLieu";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r = ps.executeQuery();
         while (r.next()) {
             nextID = r.getInt("ID") + 1;
         }
         r.close();
-        p.close();
+        ps.close();
         return nextID;
     }
 
     //Thêm một nguyên liệu mới
     public void InsertNL(ModelNguyenLieu data) throws SQLException {
         String sql = "INSERT INTO NguyenLieu(ID_NL,TenNL,Dongia,Donvitinh) VALUES(?,?,?,?)";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, data.getId());
-        p.setString(2, data.getTenNL());
-        p.setInt(3, data.getDonGia());
-        p.setString(4, data.getDvt());
-        p.execute();
-        p.close();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1, data.getId());
+        ps.setString(2, data.getTenNL());
+        ps.setInt(3, data.getDonGia());
+        ps.setString(4, data.getDvt());
+        ps.execute();
+        ps.close();
     }
 
     //Xóa một nguyên liệu
     public void DeleteNL(ModelNguyenLieu data) throws SQLException {
         //Xóa nguyên liệu đó khỏi KHO
         String sql = "DELETE FROM KHO WHERE ID_NL = ?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, data.getId());
-        p.execute();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1, data.getId());
+        ps.execute();
         //Xóa nguyên liệu đó khỏi bảng NGUYENLIEU
         sql = "DELETE FROM NguyenLieu WHERE ID_NL = ?";
-        p = con.prepareStatement(sql);
-        p.setInt(1, data.getId());
-        p.execute();
-        p.close();
+        ps = con.prepareStatement(sql);
+        ps.setInt(1, data.getId());
+        ps.execute();
+        ps.close();
     }
 
     //Sửa một nguyên liệu
     public void UpdateNL(ModelNguyenLieu data) throws SQLException {
         String sql = "UPDATE NguyenLieu SET TenNL = ?, Dongia = ?, Donvitinh = ? WHERE ID_NL = ?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setString(1, data.getTenNL());
-        p.setInt(2, data.getDonGia());
-        p.setString(3, data.getDvt());
-        p.setInt(4, data.getId());
-        p.execute();
-        p.close();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, data.getTenNL());
+        ps.setInt(2, data.getDonGia());
+        ps.setString(3, data.getDvt());
+        ps.setInt(4, data.getId());
+        ps.execute();
+        ps.close();
     }
 
     //Lấy toàn bộ danh sách Phiếu nhập kho
     public ArrayList<ModelPNK> MenuPNK() throws SQLException {
         ArrayList<ModelPNK> list = new ArrayList<>();
-        String sql = "SELECT ID_NK,ID_NV,to_char(NgayNK,'dd-mm-yyyy') AS Ngay,Tongtien FROM PhieuNK ORDER BY ID_NK";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        String sql = "SELECT ID_NK,ID_NV,DATE_FORMAT(NgayNK, '%d-%m-%Y') AS Ngay,Tongtien FROM PhieuNK ORDER BY ID_NK";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int idNK = r.getInt(1);
             int idNV = r.getInt(2);
@@ -163,17 +163,17 @@ public class ServiceStaff {
             list.add(data);
         }
         r.close();
-        p.close();
+         ps.close();
         return list;
     }
 
     //Lấy thông tin của Phiếu nhập kho theo ID
     public ModelPNK getPNKbyID(int id) throws SQLException {
         ModelPNK data = null;
-        String sql = "SELECT ID_NK,ID_NV,to_char(NgayNK,'dd-mm-yyyy') AS Ngay,Tongtien FROM PhieuNK WHERE ID_NK=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, id);
-        ResultSet r = p.executeQuery();
+        String sql = "SELECT ID_NK,ID_NV,DATE_FORMAT(NgayNK, '%d-%m-%Y') AS Ngay,Tongtien FROM PhieuNK WHERE ID_NK=?";
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, id);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int idNK = r.getInt(1);
             int idNV = r.getInt(2);
@@ -182,7 +182,7 @@ public class ServiceStaff {
             data = new ModelPNK(idNK, idNV, ngayNK, tongTien);
         }
         r.close();
-        p.close();
+         ps.close();
         return data;
     }
 
@@ -190,15 +190,15 @@ public class ServiceStaff {
     public int getTongtienNK() throws SQLException {
         int tongtien = 0;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
-        String sql = "SELECT SUM(Tongtien) FROM PhieuNK WHERE NgayNK=to_date(?, 'dd-mm-yyyy')";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setString(1, simpleDateFormat.format(new Date()));
-        ResultSet r = p.executeQuery();
+        String sql = "SELECT SUM(Tongtien) FROM PhieuNK WHERE NgayNK=STR_TO_DATE(?, 'dd-mm-yyyy')";
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setString(1, simpleDateFormat.format(new Date()));
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             tongtien = r.getInt(1);
         }
         r.close();
-        p.close();
+         ps.close();
         return tongtien;
     }
 
@@ -207,9 +207,9 @@ public class ServiceStaff {
         ArrayList<ModelCTNK> list = new ArrayList<>();
         String sql = "SELECT ID_NK,CTNK.ID_NL, TenNL,Donvitinh,SoLuong,Thanhtien FROM CTNK "
                 + "JOIN NguyenLieu ON NguyenLieu.ID_NL=CTNK.ID_NL WHERE ID_NK=? ORDER BY ID_NK";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, idnk);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, idnk);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int ID_NK = r.getInt(1);
             int ID_NL = r.getInt(2);
@@ -221,7 +221,7 @@ public class ServiceStaff {
             list.add(data);
         }
         r.close();
-        p.close();
+         ps.close();
         return list;
     }
 
@@ -229,8 +229,8 @@ public class ServiceStaff {
     public ArrayList<ModelPXK> MenuPXK() throws SQLException {
         ArrayList<ModelPXK> list = new ArrayList<>();
         String sql = "SELECT ID_XK,ID_NV,to_char(NgayXK,'dd-mm-yyyy') AS Ngay FROM PhieuXK ORDER BY ID_XK";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int idXK = r.getInt(1);
             int idNV = r.getInt(2);
@@ -239,7 +239,7 @@ public class ServiceStaff {
             list.add(data);
         }
         r.close();
-        p.close();
+         ps.close();
         return list;
     }
 
@@ -247,9 +247,9 @@ public class ServiceStaff {
     public ModelPXK getPXKbyID(int id) throws SQLException {
         ModelPXK data = null;
         String sql = "SELECT ID_XK,ID_NV,to_char(NgayXK,'dd-mm-yyyy') AS Ngay FROM PhieuXK WHERE ID_XK=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, id);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, id);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int idXK = r.getInt(1);
             int idNV = r.getInt(2);
@@ -257,7 +257,7 @@ public class ServiceStaff {
             data = new ModelPXK(idXK, idNV, ngayXK);
         }
         r.close();
-        p.close();
+         ps.close();
         return data;
     }
 
@@ -265,15 +265,15 @@ public class ServiceStaff {
     public int getSLPXK() throws SQLException {
         int sl = 0;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
-        String sql = "SELECT COUNT(*) FROM PhieuXK WHERE NgayXK=to_date(?, 'dd-mm-yyyy')";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setString(1, simpleDateFormat.format(new Date()));
-        ResultSet r = p.executeQuery();
+        String sql = "SELECT COUNT(*) FROM PhieuXK WHERE NgayXK=STR_TO_DATE(?, 'dd-mm-yyyy')";
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setString(1, simpleDateFormat.format(new Date()));
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             sl = r.getInt(1);
         }
         r.close();
-        p.close();
+         ps.close();
         return sl;
     }
 
@@ -282,9 +282,9 @@ public class ServiceStaff {
         ArrayList<ModelCTXK> list = new ArrayList<>();
         String sql = "SELECT ID_XK,CTXK.ID_NL, TenNL,Donvitinh,SoLuong FROM CTXK "
                 + "JOIN NguyenLieu ON NguyenLieu.ID_NL=CTXK.ID_NL WHERE ID_XK=? ORDER BY ID_XK";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, idxk);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, idxk);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int ID_NK = r.getInt(1);
             int ID_NL = r.getInt(2);
@@ -295,7 +295,7 @@ public class ServiceStaff {
             list.add(data);
         }
         r.close();
-        p.close();
+         ps.close();
         return list;
     }
 
@@ -304,8 +304,8 @@ public class ServiceStaff {
         ArrayList<ModelKho> list = new ArrayList<>();
         String sql = "SELECT Kho.ID_NL,TenNL,Donvitinh,SLTon FROM Kho "
                 + "JOIN NguyenLieu ON NguyenLieu.ID_NL=Kho.ID_NL ORDER BY Kho.ID_NL";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int id = r.getInt(1);  //Mã nguyên liệu
             String tenNL = r.getString(2); //Tên nguyên liệu
@@ -315,7 +315,7 @@ public class ServiceStaff {
             list.add(data);
         }
         r.close();
-        p.close();
+         ps.close();
         return list;
     }
 
@@ -323,8 +323,8 @@ public class ServiceStaff {
     public int getSLNL_TonKho() throws SQLException {
         int sl = 0;
         String sql = "SELECT COUNT(*) FROM Kho WHERE SLTon>0";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             sl = r.getInt(1);
         }
@@ -335,13 +335,13 @@ public class ServiceStaff {
     public int getNextID_NK() throws SQLException {
         int nextID = 0;
         String sql = "SELECT MAX(ID_NK) as ID FROM PhieuNK";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             nextID = r.getInt("ID") + 1;
         }
         r.close();
-        p.close();
+         ps.close();
         return nextID;
     }
 
@@ -349,25 +349,25 @@ public class ServiceStaff {
     public int getNextID_XK() throws SQLException {
         int nextID = 0;
         String sql = "SELECT MAX(ID_XK) as ID FROM PhieuXK";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             nextID = r.getInt("ID") + 1;
         }
         r.close();
-        p.close();
+         ps.close();
         return nextID;
     }
 
     //Thêm phiếu nhập kho và chi tiết Nhập kho
     public void InsertPNK_CTNK(ModelPNK pnk, ArrayList<ModelKho> list) throws SQLException {
         //Thêm phiếu nhập kho
-        String sql = "INSERT INTO PhieuNK(ID_NK,ID_NV,NgayNK) VALUES (?,?,to_date(?, 'dd-mm-yyyy'))";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, pnk.getIdNK());
-        p.setInt(2, pnk.getIdNV());
-        p.setString(3, pnk.getNgayNK());
-        p.execute();
+        String sql = "INSERT INTO PhieuNK(ID_NK,ID_NV,NgayNK) VALUES (?,?,STR_TO_DATE(?, 'dd-mm-yyyy'))";
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, pnk.getIdNK());
+         ps.setInt(2, pnk.getIdNV());
+         ps.setString(3, pnk.getNgayNK());
+         ps.execute();
         //Thêm chi tiết nhập kho
         String sql_ct;
         for (ModelKho data : list) {
@@ -381,18 +381,18 @@ public class ServiceStaff {
                 p_ct.close();
             }
         }
-        p.close();
+         ps.close();
     }
 
     //Thêm phiếu xuất kho và chi tiết Xuất kho
     public void InsertPXK_CTXK(ModelPXK pxk, ArrayList<ModelKho> list) throws SQLException {
         //Thêm phiếu nhập kho
-        String sql = "INSERT INTO PhieuXK(ID_XK,ID_NV,NgayXK) VALUES (?,?,to_date(?, 'dd-mm-yyyy'))";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, pxk.getIdXK());
-        p.setInt(2, pxk.getIdNV());
-        p.setString(3, pxk.getNgayXK());
-        p.execute();
+        String sql = "INSERT INTO PhieuXK(ID_XK,ID_NV,NgayXK) VALUES (?,?,STR_TO_DATE(?, 'dd-mm-yyyy'))";
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, pxk.getIdXK());
+         ps.setInt(2, pxk.getIdNV());
+         ps.setString(3, pxk.getNgayXK());
+         ps.execute();
         //Thêm chi tiết nhập kho
         String sql_ct;
         for (ModelKho data : list) {
@@ -406,15 +406,15 @@ public class ServiceStaff {
                 p_ct.close();
             }
         }
-        p.close();
+         ps.close();
     }
 
     //Lấy toàn bộ danh sách Khách Hàng
     public ArrayList<ModelKhachHang> MenuKH() throws SQLException {
         ArrayList<ModelKhachHang> list = new ArrayList<>();
         String sql = "SELECT ID_KH, TenKH, to_char(Ngaythamgia,'dd-mm-yyyy') AS Ngay, Doanhso, Diemtichluy FROM KhachHang";
-        PreparedStatement p = con.prepareStatement(sql);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int ID_KH = r.getInt(1);
             String name = r.getString(2);
@@ -425,26 +425,26 @@ public class ServiceStaff {
             list.add(data);
         }
         r.close();
-        p.close();
+         ps.close();
         return list;
     }
 
     //Điều chỉnh trạng thái bàn thành Đã đặt trước sau khi nhân viên xác nhận
     public void setTableReserve(int idBan) throws SQLException {
         String sql = "UPDATE BAN SET TrangThai = 'Da dat truoc' WHERE ID_Ban=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, idBan);
-        p.execute();
-        p.close();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, idBan);
+         ps.execute();
+         ps.close();
     }
 
     //Hủy trạng thái bàn đã Đặt trước trước thành Còn trống
     public void CancelTableReserve(int idBan) throws SQLException {
         String sql = "UPDATE BAN SET TrangThai = 'Con trong' WHERE ID_Ban=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, idBan);
-        p.execute();
-        p.close();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, idBan);
+         ps.execute();
+         ps.close();
     }
 
     //Tìm hóa đơn có trạng thái Chưa thanh toán  dựa vào trạng mã Bàn
@@ -452,9 +452,9 @@ public class ServiceStaff {
         ModelHoaDon hoadon = null;
         String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,to_char(NgayHD,'dd-mm-yyyy') AS Ngay,TienMonAn,Code_Voucher,TienGiam,Tongtien,Trangthai FROM HoaDon "
                 + "WHERE ID_Ban=? AND Trangthai='Chua thanh toan'";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, table.getID());
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, table.getID());
+        ResultSet r =  ps.executeQuery();
         while (r.next()) {
             int idHoaDon = r.getInt(1);
             int idKH = r.getInt(2);
@@ -468,30 +468,30 @@ public class ServiceStaff {
             hoadon = new ModelHoaDon(idHoaDon, idKH, idBan, ngayHD, tienMonAn, code_voucher, tienGiam, tongtien, trangthai);
         }
         r.close();
-        p.close();
+         ps.close();
         return hoadon;
     }
 
     //Cập nhật trạng thái Hóa đơn thành Đã thanh toán khi Nhân viên xác nhận thanh toán
     public void UpdateHoaDonStatus(int idHD) throws SQLException {
         String sql = "UPDATE HoaDon SET TrangThai = 'Da thanh toan' WHERE ID_HoaDon=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, idHD);
-        p.execute();
-        p.close();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, idHD);
+         ps.execute();
+         ps.close();
     }
 
     //Lấy tên khách hàng từ Mã KH
     public String getTenKH(int idKH) throws SQLException {
         String name = "";
         String sql = "SELECT TenKH From KhachHang WHERE ID_KH=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, idKH);
-        ResultSet r = p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+         ps.setInt(1, idKH);
+        ResultSet r =  ps.executeQuery();
         if (r.next()) {
             name = r.getString(1);
         }
-        p.close();
+         ps.close();
         r.close();
         return name;
     }

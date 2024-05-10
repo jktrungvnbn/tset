@@ -31,8 +31,8 @@ public class ServiceUser {
     */
     public ModelNguoiDung login(ModelLogin login) throws SQLException{
         ModelNguoiDung user=null;
-        String sql = "SELECT * FROM NguoiDung WHERE Email=? AND Matkhau=? AND Trangthai='Verified' FETCH FIRST 1 ROWS ONLY";
-        PreparedStatement p=con.prepareStatement(sql);
+        String sql = "SELECT * FROM NguoiDung WHERE Email=? AND Matkhau=? AND Trangthai='Verified' LIMIT 1;";
+        PreparedStatement p =con.prepareStatement(sql);
         p.setString(1, login.getEmail());
         p.setString(2, login.getPassword());
         ResultSet r= p.executeQuery();
@@ -71,7 +71,7 @@ public class ServiceUser {
         int userID=r.getInt("ID_ND")+1;
         
         //Thêm Ngưgời Dùng
-        String sql_ND = "INSERT INTO NguoiDung (ID_ND,Email, MatKhau, VerifyCode,Vaitro) VALUES (?,?, ?, ?,'Khach Hang')";
+        String sql_ND = "";
         PreparedStatement p=con.prepareStatement(sql_ND);
         String code=generateVerifiyCode();
         p.setInt(1, userID);
@@ -92,7 +92,7 @@ public class ServiceUser {
     //Kiểm tra Mã trùng 
     private boolean checkDuplicateCode(String code) throws SQLException{
         boolean duplicate=false;
-        String sql="SELECT * FROM NguoiDung WHERE VerifyCode=? FETCH FIRST 1 ROWS ONLY";
+        String sql="SELECT * FROM NguoiDung WHERE VerifyCode=? LIMIT 1";
         PreparedStatement p = con.prepareStatement(sql);
         p.setString(1, code);
         ResultSet r=p.executeQuery();
@@ -111,7 +111,7 @@ public class ServiceUser {
     */
     public boolean checkDuplicateEmail(String email) throws SQLException{
         boolean duplicate=false;
-        String sql="SELECT * FROM NguoiDung WHERE Email=? AND Trangthai='Verified' FETCH FIRST 1 ROWS ONLY";
+        String sql="SELECT * FROM NguoiDung WHERE Email=? AND Trangthai='Verified' LIMIT 1";
         PreparedStatement p = con.prepareStatement(sql);
         p.setString(1, email);
         ResultSet r=p.executeQuery();
@@ -135,21 +135,21 @@ public class ServiceUser {
     public void doneVerify(int userID,String name) throws SQLException{
         //Cập nhật NguoiDung
         String sql_ND="UPDATE NguoiDung SET VerifyCode='', Trangthai='Verified' WHERE ID_ND=?";
-        PreparedStatement p1 = con.prepareStatement(sql_ND);
-        p1.setInt(1, userID);
-        p1.execute();
+        PreparedStatement ps1 = con.prepareStatement(sql_ND);
+        ps1.setInt(1, userID);
+        ps1.execute();
         //Lấy id của Khách Hàng tiếp theo
         int id=0;
         String sql_ID="SELECT MAX(ID_KH) as ID FROM KhachHang";
-        PreparedStatement p_id = con.prepareStatement(sql_ID);
-        ResultSet r=p_id.executeQuery();
+        PreparedStatement ps_id = con.prepareStatement(sql_ID);
+        ResultSet r=ps_id.executeQuery();
         if(r.next()){
             id=r.getInt("ID")+1;
         }
         
         //Thêm KH mới
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
-        String sql_KH="INSERT INTO KhachHang (ID_KH,TenKH, Ngaythamgia,ID_ND) VALUES (?,?,to_date(?, 'dd-mm-yyyy'),?)";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("%d-%m-%Y");
+        String sql_KH="INSERT INTO KhachHang (ID_KH,TenKH, Ngaythamgia,ID_ND) VALUES (?,?,STR_TO_DATE(?, '%d-%m-%Y'),?)";
         PreparedStatement p2=con.prepareStatement(sql_KH);
         p2.setInt(1, id);
         p2.setString(2, name);
@@ -157,8 +157,8 @@ public class ServiceUser {
         p2.setInt(4, userID);
         p2.execute();
         
-        p1.close();
-        p_id.close();
+        ps1.close();
+        ps_id.close();
         p2.close();
     }
     
@@ -171,26 +171,26 @@ public class ServiceUser {
     public boolean verifyCodeWithUser(int userID,String code) throws SQLException{
         boolean verify=false;
         String sql="SELECT COUNT(ID_ND) as CountID FROM NguoiDung WHERE ID_ND=? AND VerifyCode=?";
-        PreparedStatement p = con.prepareStatement(sql);
-        p.setInt(1, userID);
-        p.setString(2,code);
-        ResultSet r=p.executeQuery();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1, userID);
+        ps.setString(2,code);
+        ResultSet r=ps.executeQuery();
         if(r.next()){
             if(r.getInt("CountID")>0){
                 verify=true;
             }
         }
         r.close();
-        p.close();
+        ps.close();
         return verify;
     }
     //Thay đổi mật khẩu tài khoản
     public void changePassword(int userID,String newPass) throws SQLException{
         String sql="UPDATE NguoiDung SET MatKhau = ? WHERE ID_ND = ?";
-        PreparedStatement p=con.prepareStatement(sql);
-        p.setString(1, newPass);
-        p.setInt(2, userID);
-        p.execute();
-        p.close();
+        PreparedStatement ps=con.prepareStatement(sql);
+        ps.setString(1, newPass);
+        ps.setInt(2, userID);
+        ps.execute();
+        ps.close();
     }
 }
