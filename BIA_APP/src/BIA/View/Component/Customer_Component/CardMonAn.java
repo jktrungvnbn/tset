@@ -45,7 +45,7 @@ public class CardMonAn extends javax.swing.JPanel {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbTitle = new javax.swing.JLabel();
@@ -84,7 +84,7 @@ public class CardMonAn extends javax.swing.JPanel {
             }
         });
 
-        cmdOrder.setBackground(new java.awt.Color(108, 91, 123));
+        cmdOrder.setBackground(new java.awt.Color(0, 153, 153));
         cmdOrder.setForeground(new java.awt.Color(242, 242, 242));
         cmdOrder.setText("THÊM");
         cmdOrder.setToolTipText("");
@@ -99,56 +99,44 @@ public class CardMonAn extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                Short.MAX_VALUE)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lbValue, javax.swing.GroupLayout.DEFAULT_SIZE, 160,
-                                                Short.MAX_VALUE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap(80, Short.MAX_VALUE)
-                                .addComponent(cmdMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 28,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, Short.MAX_VALUE)
-                                .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 28,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(80, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(95, 95, 95)
-                                .addComponent(cmdOrder, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(94, 94, 94)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbValue, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(80, Short.MAX_VALUE)
+                .addComponent(cmdMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(80, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(95, 95, 95)
+                .addComponent(cmdOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(94, 94, 94))
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbTitle)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbValue, javax.swing.GroupLayout.PREFERRED_SIZE, 20,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(cmdMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 26,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(cmdAdd, javax.swing.GroupLayout.Alignment.TRAILING,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE, 26,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 26,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(15, 15, 15)
-                                .addComponent(cmdOrder, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(16, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbValue, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmdMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmdAdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addComponent(cmdOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdMinusActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cmdMinusActionPerformed

@@ -81,7 +81,7 @@ public class MenuA extends javax.swing.JPanel {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         sp = new javax.swing.JScrollPane();
@@ -102,11 +102,13 @@ public class MenuA extends javax.swing.JPanel {
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
-                panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 510, Short.MAX_VALUE));
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 510, Short.MAX_VALUE)
+        );
         panelLayout.setVerticalGroup(
-                panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 448, Short.MAX_VALUE));
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 448, Short.MAX_VALUE)
+        );
 
         sp.setViewportView(panel);
 
@@ -115,23 +117,24 @@ public class MenuA extends javax.swing.JPanel {
         logo.setForeground(new java.awt.Color(255, 255, 255));
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/businessman.png"))); // NOI18N
-        logo.setText("<html>Royal Administrator<br> Restaurant ★★★★★</html>");
+        logo.setText("<html> Administrator<br> Restaurant ★★★★★</html>");
         logo.setIconTextGap(15);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addComponent(logo, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(logo, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 86,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
-                                .addContainerGap()));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+                .addContainerGap())
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     @Override

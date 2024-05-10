@@ -24,7 +24,7 @@ public class AboutUs_Form extends javax.swing.JPanel {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         panelRound1 = new BIA.View.Swing.PanelRound();
@@ -52,8 +52,7 @@ public class AboutUs_Form extends javax.swing.JPanel {
         wel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         wel.setForeground(new java.awt.Color(63, 63, 63));
         wel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        wel.setText(
-                "<html>  Welcome to  <i style=\"color:rgb(108,91,123);font-size:16px;\">  ROYAL THEDREAMERS<i> </html>");
+        wel.setText("<html>  Welcome to  <i style=\"color:rgb(108,91,123);font-size:16px;\">  BIA VIET <i> </html>");
 
         jScrollPane2.setBorder(null);
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -66,8 +65,7 @@ public class AboutUs_Form extends javax.swing.JPanel {
         txt.setForeground(new java.awt.Color(89, 89, 89));
         txt.setLineWrap(true);
         txt.setRows(5);
-        txt.setText(
-                "Nhà hàng của chúng tôi là biểu tượng của sự thanh lịch và sang trọng. Với kiến trúc đẹp mắt, nội thất đậm chất cổ điển và sự chú trọng đến từng chi tiết nhỏ, chúng tôi tạo ra một không gian lịch sự và đẳng cấp.\n\nĐội ngũ đầu bếp chúng tôi là những nghệ nhân ẩm thực, tạo ra những tác phẩm nghệ thuật trên đĩa. Với sự khéo léo trong việc kết hợp các hương vị, chúng tôi mang đến cho thực khách những trải nghiệm ẩm thực độc đáo và tinh tế. Chúng tôi sử dụng các nguyên liệu tươi ngon và cao cấp nhất, kết hợp với sự sáng tạo và kỹ thuật chế biến tinh tế để tạo nên những món ăn truyền thống với một phong cách hiện đại và độc đáo.\n\nNhà hàng của chúng tôi là một nơi lý tưởng để tụ họp với gia đình và bạn bè, nơi mà từng chi tiết đều được chăm chút tỉ mỉ. Không gian tiếp khách được thiết kế để tạo ra sự riêng tư và thoải mái, với ánh sáng dịu nhẹ và không gian yên tĩnh, tạo điều kiện lý tưởng để thưởng thức bữa ăn thượng hạng.\n\nĐội ngũ nhân viên phục vụ của chúng tôi, với sự chuyên nghiệp và tận tâm, sẽ đảm bảo rằng mỗi khách hàng được đối xử với sự chu đáo và sự phục vụ tận tâm. Chúng tôi sẽ tạo ra những trải nghiệm ẩm thực đáng nhớ, vượt xa mong đợi của quý khách.\n\nHãy đến và khám phá không gian thanh lịch, tinh tế và sang trọng của nhà hàng chúng tôi. Chúng tôi cam kết đem đến cho quý khách một trải nghiệm ẩm thực đẳng cấp và không gian lịch sự, để bạn có thể thưởng thức một bữa ăn ngon và có được những kỷ niệm chưa từng có.");
+        txt.setText("Nhà hàng của chúng tôi là biểu tượng của sự thanh lịch và sang trọng. Với kiến trúc đẹp mắt, nội thất đậm chất cổ điển và sự chú trọng đến từng chi tiết nhỏ, chúng tôi tạo ra một không gian lịch sự và đẳng cấp.\n\nNhà hàng của chúng tôi là một nơi lý tưởng để tụ họp với gia đình và bạn bè, nơi mà từng chi tiết đều được chăm chút tỉ mỉ. Không gian tiếp khách được thiết kế để tạo ra sự riêng tư và thoải mái, với ánh sáng dịu nhẹ và không gian yên tĩnh, tạo điều kiện lý tưởng để thưởng thức bữa ăn thượng hạng.\n\nĐội ngũ nhân viên phục vụ của chúng tôi, với sự chuyên nghiệp và tận tâm, sẽ đảm bảo rằng mỗi khách hàng được đối xử với sự chu đáo và sự phục vụ tận tâm. Chúng tôi sẽ tạo ra những trải nghiệm ẩm thực đáng nhớ, vượt xa mong đợi của quý khách.\n\nHãy đến và khám phá không gian thanh lịch, tinh tế và sang trọng của nhà hàng chúng tôi. Chúng tôi cam kết đem đến cho quý khách một trải nghiệm ẩm thực đẳng cấp và không gian lịch sự, để bạn có thể thưởng thức một bữa ăn ngon và có được những kỷ niệm chưa từng có.");
         txt.setWrapStyleWord(true);
         txt.setBorder(null);
         txt.setDisabledTextColor(new java.awt.Color(255, 255, 255));
@@ -80,7 +78,7 @@ public class AboutUs_Form extends javax.swing.JPanel {
         footer.setBackground(new java.awt.Color(255, 255, 255));
         footer.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         footer.setForeground(new java.awt.Color(63, 63, 63));
-        footer.setText("Since : 2023 - Co-founder by The Dreamers Team\n");
+        footer.setText("Since : 2024 - Co-founder by The Team 14");
 
         jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane3.setBorder(null);
@@ -92,8 +90,7 @@ public class AboutUs_Form extends javax.swing.JPanel {
         listMember.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         listMember.setForeground(new java.awt.Color(89, 89, 89));
         listMember.setRows(5);
-        listMember.setText(
-                "Team Members :\nLê Thị Ánh Hồng - Product Owner\nNguyễn Hoàng Việt - Scrum Master\nNguyễn Hoàng Phúc - Developer\nHồ Quang Đỉnh -  Developer");
+        listMember.setText("Team Members :\nNguyễn Quốc Trung  - Developer\nPhùng Văn Nguyên  -  Developer");
         listMember.setBorder(null);
         listMember.setFocusable(false);
         jScrollPane3.setViewportView(listMember);
@@ -108,95 +105,71 @@ public class AboutUs_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
-                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                                .addGroup(panelRound1Layout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(panelRound1Layout.createSequentialGroup()
-                                                .addGroup(panelRound1Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(panelRound1Layout.createSequentialGroup()
-                                                                .addGap(236, 236, 236)
-                                                                .addComponent(header))
-                                                        .addGroup(panelRound1Layout.createSequentialGroup()
-                                                                .addGap(26, 26, 26)
-                                                                .addGroup(panelRound1Layout.createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(wel,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jScrollPane2,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                550,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(footer)
-                                                                        .addComponent(jScrollPane3,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30,
-                                                        Short.MAX_VALUE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout
-                                                .createSequentialGroup()
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(panelRound1Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                panelRound1Layout.createSequentialGroup()
-                                                                        .addComponent(jSeparator1,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                470,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addGap(75, 75, 75))
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                panelRound1Layout.createSequentialGroup()
-                                                                        .addComponent(header1)
-                                                                        .addGap(116, 116, 116)))))
-                                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 494,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)));
-        panelRound1Layout.setVerticalGroup(
-                panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panelRound1Layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(header)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRound1Layout.createSequentialGroup()
+                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addGap(236, 236, 236)
+                                .addComponent(header))
+                            .addGroup(panelRound1Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(wel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(footer)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(75, 75, 75))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
                                 .addComponent(header1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(wel, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 419,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(footer)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(img, javax.swing.GroupLayout.Alignment.TRAILING,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE));
+                                .addGap(116, 116, 116)))))
+                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2))
+        );
+        panelRound1Layout.setVerticalGroup(
+            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(header)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(header1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(wel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(footer)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(img, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(7, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(7, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

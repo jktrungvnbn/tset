@@ -446,7 +446,7 @@
         <Component class="BIA.View.Swing.Button" name="cmdKick">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="7b" green="5b" red="6c" type="rgb"/>
+              <Color blue="99" green="99" red="0" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

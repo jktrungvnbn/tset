@@ -100,7 +100,7 @@ public class StaffManagement_Form extends javax.swing.JPanel {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbTitle = new javax.swing.JLabel();
@@ -147,18 +147,19 @@ public class StaffManagement_Form extends javax.swing.JPanel {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         tableNV.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
-                        "Mã NV", "Tên nhân viên", "Ngày vào làm", "Số điện thoại", "Chức vụ", "Tình Trạng"
-                }) {
-            boolean[] canEdit = new boolean[] {
-                    false, false, false, false, false, false
+            },
+            new String [] {
+                "Mã NV", "Tên nhân viên", "Ngày vào làm", "Số điện thoại", "Chức vụ", "Tình Trạng"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit[columnIndex];
+                return canEdit [columnIndex];
             }
         });
         jScrollPane1.setViewportView(tableNV);
@@ -171,7 +172,7 @@ public class StaffManagement_Form extends javax.swing.JPanel {
             tableNV.getColumnModel().getColumn(2).setPreferredWidth(100);
         }
 
-        cmdAdd.setBackground(new java.awt.Color(108, 91, 123));
+        cmdAdd.setBackground(new java.awt.Color(0, 153, 153));
         cmdAdd.setForeground(new java.awt.Color(255, 255, 255));
         cmdAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/plus.png"))); // NOI18N
         cmdAdd.setText("THÊM NV");
@@ -179,7 +180,7 @@ public class StaffManagement_Form extends javax.swing.JPanel {
         cmdAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cmdAdd.setIconTextGap(15);
 
-        cmdUpdate.setBackground(new java.awt.Color(108, 91, 123));
+        cmdUpdate.setBackground(new java.awt.Color(0, 153, 153));
         cmdUpdate.setForeground(new java.awt.Color(255, 255, 255));
         cmdUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/change.png"))); // NOI18N
         cmdUpdate.setText("SỬA THÔNG TIN");
@@ -189,68 +190,51 @@ public class StaffManagement_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 857,
-                                                Short.MAX_VALUE)
-                                        .addComponent(jSeparator2)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(lbTong)
-                                                                .addGap(50, 50, 50)
-                                                                .addComponent(txtTong,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 200,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(lbTitle)
-                                                        .addComponent(lbNV))
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 400,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(30, 30, 30)
-                                                .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 155,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap()));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 857, Short.MAX_VALUE)
+                    .addComponent(jSeparator2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbTong)
+                                .addGap(50, 50, 50)
+                                .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbTitle)
+                            .addComponent(lbNV))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20)
-                                .addComponent(lbNV)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap()));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(lbNV)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmdAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmdUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtSearchActionPerformed

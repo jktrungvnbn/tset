@@ -112,7 +112,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="lbTitle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="189" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -163,7 +163,7 @@
               <Color blue="7b" green="5b" red="6c" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Royal TheDreamers Restaurant"/>
+            <Property name="text" type="java.lang.String" value="BIA VIET"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">

@@ -106,7 +106,7 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         bg = new BIA.View.Swing.PanelRound();
@@ -180,8 +180,7 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         cbboxCvu.setBackground(new java.awt.Color(215, 221, 232));
         cbboxCvu.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         cbboxCvu.setForeground(new java.awt.Color(83, 105, 118));
-        cbboxCvu.setModel(new javax.swing.DefaultComboBoxModel<>(
-                new String[] { "Phuc vu", "Tiep tan", "Thu ngan", "Bep", "Kho", "Quan ly" }));
+        cbboxCvu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Phuc vu", "Tiep tan", "Thu ngan", "Bep", "Kho", "Quan ly" }));
         cbboxCvu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
         cbboxCvu.setFocusable(false);
 
@@ -239,7 +238,7 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         txtmaNQL.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtmaNQL.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
 
-        cmdKick.setBackground(new java.awt.Color(108, 91, 123));
+        cmdKick.setBackground(new java.awt.Color(0, 153, 153));
         cmdKick.setForeground(new java.awt.Color(255, 255, 255));
         cmdKick.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/job.png"))); // NOI18N
         cmdKick.setText("SA THẢI");
@@ -250,195 +249,122 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
-                bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(bgLayout.createSequentialGroup()
-                                .addGap(80, 80, 80)
+            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addComponent(lbTitle)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cmdKick, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator2)
+                    .addComponent(jSeparator1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
+                        .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(bgLayout.createSequentialGroup()
                                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(bgLayout.createSequentialGroup()
-                                                .addComponent(lbTitle)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(cmdKick, javax.swing.GroupLayout.PREFERRED_SIZE, 160,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jSeparator2)
-                                        .addComponent(jSeparator1)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout
-                                                .createSequentialGroup()
-                                                .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 335,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(45, 45, 45)
-                                                .addGroup(bgLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addGroup(bgLayout.createSequentialGroup()
-                                                                .addGroup(bgLayout.createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(lbtenNV,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                137, Short.MAX_VALUE)
-                                                                        .addComponent(lbmaNV,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                Short.MAX_VALUE))
-                                                                .addGap(30, 30, 30)
-                                                                .addGroup(bgLayout.createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(txtmaNV,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                201,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addGroup(bgLayout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                .addComponent(txtNVL,
-                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                        Short.MAX_VALUE)
-                                                                                .addComponent(txttenNV,
-                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                        200,
-                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                                        .addGroup(bgLayout.createSequentialGroup()
-                                                                .addGroup(bgLayout.createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING,
-                                                                        false)
-                                                                        .addGroup(
-                                                                                javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                                bgLayout.createSequentialGroup()
-                                                                                        .addComponent(lbsdt,
-                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                132, Short.MAX_VALUE)
-                                                                                        .addGap(30, 30, 30)
-                                                                                        .addComponent(txttSDT,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                200,
-                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                        .addGroup(bgLayout.createSequentialGroup()
-                                                                                .addGroup(bgLayout.createParallelGroup(
-                                                                                        javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                        false)
-                                                                                        .addComponent(lbNVL,
-                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                Short.MAX_VALUE)
-                                                                                        .addComponent(lbcvu,
-                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                132, Short.MAX_VALUE))
-                                                                                .addGap(30, 30, 30)
-                                                                                .addComponent(cbboxCvu, 0,
-                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                        Short.MAX_VALUE)))
-                                                                .addGap(1, 1, 1))
-                                                        .addGroup(bgLayout.createSequentialGroup()
-                                                                .addComponent(lbmaNQL,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 131,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(29, 29, 29)
-                                                                .addComponent(txtmaNQL,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 203,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(80, 80, 80))
-                        .addGroup(bgLayout.createSequentialGroup()
-                                .addGap(231, 231, 231)
-                                .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(148, 148, 148)
-                                .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)));
+                                    .addComponent(lbtenNV, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                    .addComponent(lbmaNV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(30, 30, 30)
+                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtmaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(txtNVL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txttenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(bgLayout.createSequentialGroup()
+                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
+                                        .addComponent(lbsdt, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                                        .addGap(30, 30, 30)
+                                        .addComponent(txttSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(bgLayout.createSequentialGroup()
+                                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(lbNVL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(lbcvu, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
+                                        .addGap(30, 30, 30)
+                                        .addComponent(cbboxCvu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(1, 1, 1))
+                            .addGroup(bgLayout.createSequentialGroup()
+                                .addComponent(lbmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addComponent(txtmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(80, 80, 80))
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGap(231, 231, 231)
+                .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(148, 148, 148)
+                .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
         bgLayout.setVerticalGroup(
-                bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(bgLayout.createSequentialGroup()
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(bgLayout.createSequentialGroup()
-                                                .addGap(30, 30, 30)
-                                                .addComponent(lbTitle)
-                                                .addGap(20, 20, 20))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                bgLayout.createSequentialGroup()
-                                                        .addContainerGap()
-                                                        .addComponent(cmdKick, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(
-                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(bgLayout.createSequentialGroup()
-                                                .addGap(40, 40, 40)
-                                                .addGroup(bgLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(lbmaNV, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtmaNV, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(20, 20, 20)
-                                                .addGroup(bgLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(lbtenNV, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txttenNV, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(20, 20, 20)
-                                                .addGroup(bgLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING,
-                                                                false)
-                                                        .addComponent(lbNVL, javax.swing.GroupLayout.DEFAULT_SIZE, 38,
-                                                                Short.MAX_VALUE)
-                                                        .addComponent(txtNVL, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                .addGap(20, 20, 20)
-                                                .addGroup(bgLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(lbsdt, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txttSDT, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(20, 20, 20)
-                                                .addGroup(bgLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(lbcvu, javax.swing.GroupLayout.PREFERRED_SIZE, 38,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(cbboxCvu, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(20, 20, 20)
-                                                .addGroup(bgLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(lbmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txtmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(bgLayout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 366,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50,
-                                        Short.MAX_VALUE)
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(40, 40, 40)));
+            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(lbTitle)
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(cmdKick, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbmaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtmaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbtenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txttenNV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lbNVL, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                            .addComponent(txtNVL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbsdt, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txttSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbcvu, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbboxCvu, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdOKActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cmdOKActionPerformed

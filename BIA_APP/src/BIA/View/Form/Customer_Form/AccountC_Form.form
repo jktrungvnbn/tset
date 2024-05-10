@@ -42,7 +42,7 @@
     <Container class="BIA.View.Swing.PanelRound" name="bg">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="f7" green="f7" red="f7" type="rgb"/>
+          <Color blue="66" green="66" red="66" type="rgb"/>
         </Property>
       </Properties>
 
@@ -424,7 +424,7 @@
         <Component class="BIA.View.Swing.Button" name="cmdDMK">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e8" green="dd" red="d7" type="rgb"/>
+              <Color blue="cc" green="cc" red="0" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
