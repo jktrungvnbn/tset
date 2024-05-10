@@ -72,6 +72,7 @@ public class TableMenu_Form extends javax.swing.JPanel {
         try {
 
             list = service.MenuTable(floor);
+            System.out.println("GET " + list);
             for (ModelBan data : list) {
                 panel.add(new CardBan(data, customer));
             }

@@ -34,7 +34,7 @@ public class MS_ChangePassword extends javax.swing.JDialog {
         initComponents();
         service = new ServiceUser();
         this.frame = parent;
-        setOpacity(0f);
+        //setOpacity(0f);
         getContentPane().setBackground(Color.WHITE);
         TimingTarget target = new TimingTargetAdapter() {
             @Override
