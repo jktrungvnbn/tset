@@ -137,7 +137,7 @@ public class ServiceCustomer {
     //Lấy thông tin khách hàng từ ID người dùng
     public ModelKhachHang getCustomer(int userID) throws SQLException {
         ModelKhachHang data = null;
-        String sql = "SESELECT ID_KH, TenKH, DATE_FORMAT(NgayHD, '%d-%m-%Y')DH AS NgayTG, Doanhso, Diemtichluy " +
+        String sql = "SELECT ID_KH, TenKH, DATE_FORMAT(Ngaythamgia, '%d-%m-%Y')DH AS NgayTG, Doanhso, Diemtichluy " +
                     "FROM KhachHang " +
                     "WHERE ID_ND = ?";
         PreparedStatement p = con.prepareStatement(sql);
